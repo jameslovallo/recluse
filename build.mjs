@@ -10,6 +10,7 @@ import layout from '../../src/layouts/default.js'
 
 const marked = new Marked(
 	markedHighlight({
+		langPrefix: 'language-',
 		highlight(code, lang) {
 			if (prism.languages[lang]) {
 				return prism.highlight(code, prism.languages[lang], lang)
