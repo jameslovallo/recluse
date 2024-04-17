@@ -10,7 +10,18 @@ export const md = html
 
 export const css = (s) => s
 
-export const loop = (arr, template) => arr.map((el) => template(el)).join('')
+export const loop = (arr, template) => {
+	if (typeof arr === 'number') {
+		arr = [...Array(arr)]
+	}
+	return arr
+		.map((el, index) => {
+			if (typeof template === 'function') {
+				return template({ ...el, index })
+			} else return template
+		})
+		.join('')
+}
 
 export const when = (condition, html) => (condition ? html : '<!-- -->')
 
