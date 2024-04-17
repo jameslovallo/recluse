@@ -1,0 +1,19 @@
+{
+	"name": "cuirk",
+	"type": "module",
+	"version": "0.0.22",
+	"description": "The static site generator for Cuick.js",
+	"main": "index.js",
+	"module": "index.js",
+	"bin": {
+		"build": "build.mjs"
+	},
+	"author": "James Lovallo",
+	"license": "ISC",
+	"dependencies": {
+		"marked": "^12.0.1",
+		"marked-highlight": "^2.1.1",
+		"nodemon": "^3.1.0",
+		"prismjs": "^1.29.0"
+	}
+}
