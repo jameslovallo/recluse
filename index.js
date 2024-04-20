@@ -27,10 +27,13 @@ export const loop = (arr, template) => {
 
 export const when = (condition, html) => (condition ? html : '<!-- -->')
 
-export const componentStyles = (components) =>
-	Object.values(components)
-		.map((component) => component.style)
-		.join('\n')
+export const componentStyles = (components) => `
+	<style>
+		${Object.values(components)
+			.map((component) => component.style)
+			.join('\n')}
+	</style>
+`
 
 export const createTags = (data, type) =>
 	data
