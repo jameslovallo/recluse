@@ -47,6 +47,8 @@ export const tags = (data, type) =>
 		.join('\n')
 
 export const embedFile = (file) =>
-	['```' + file.split('.').pop(), fs.readFileSync(file, 'utf-8'), '```'].join(
-		'\n'
-	)
+	[
+		'```' + file.split('.').pop(),
+		fs.readFileSync(file, 'utf-8').replaceAll('\t', '  '),
+		'```',
+	].join('\n')
