@@ -8,6 +8,9 @@
 	"bin": {
 		"build": "build.mjs"
 	},
+	"scripts": {
+		"update": "npm version patch && npm publish && git push"
+	},
 	"author": "James Lovallo",
 	"license": "ISC",
 	"dependencies": {
