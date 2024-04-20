@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 export const html = (strings, ...values) => {
 	let str = strings[0]
 	for (let i = 0; i < values.length; i++) {
@@ -25,6 +27,11 @@ export const loop = (arr, template) => {
 
 export const when = (condition, html) => (condition ? html : '<!-- -->')
 
+export const componentStyles = (components) =>
+	Object.values(components)
+		.map((component) => component.style)
+		.join('\n')
+
 export const tags = (data, type) =>
 	data
 		.map((tag) => {
@@ -38,3 +45,8 @@ export const tags = (data, type) =>
 			}
 		})
 		.join('\n')
+
+export const embedFile = (file) =>
+	['```' + file.split('.').pop(), fs.readFileSync(file, 'utf-8'), '```'].join(
+		'\n'
+	)
