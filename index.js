@@ -32,7 +32,7 @@ export const componentStyles = (components) =>
 		.map((component) => component.style)
 		.join('\n')
 
-export const tags = (data, type) =>
+export const createTags = (data, type) =>
 	data
 		.map((tag) => {
 			const attrs = Object.keys(tag)
@@ -46,7 +46,7 @@ export const tags = (data, type) =>
 		})
 		.join('\n')
 
-export const embedFile = (file) =>
+export const embedCode = (file) =>
 	[
 		'```' + file.split('.').pop(),
 		fs.readFileSync(file, 'utf-8').replaceAll('\t', '  '),
