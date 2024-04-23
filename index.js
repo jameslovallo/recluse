@@ -12,6 +12,8 @@ export const html = (strings, ...values) => {
 export const md = html
 
 export const css = (s) => s
+export const scss = (s) => s
+export const sass = (s) => s
 
 export const loop = (arr, template) => {
 	if (typeof arr === 'number') {
