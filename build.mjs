@@ -5,7 +5,6 @@ import { Marked } from 'marked'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
-import { meta, navLinks } from '../../src/config.js'
 import layout from '../../src/layouts/default.js'
 
 const marked = new Marked(
@@ -25,19 +24,18 @@ fs.rmSync('./dist', { recursive: true, force: true })
 fs.mkdirSync('./dist')
 
 const writePage = (filename) => {
-	import('../../' + filename).then(({ meta: pageMeta, body }) => {
+	import('../../' + filename).then(({ meta, body }) => {
 		const page = layout({
-			meta: { ...(meta || {}), ...(pageMeta || {}) },
-			links: [...(meta.links || []), ...(pageMeta?.links || [])],
-			scripts: [...(meta.scripts || []), ...(pageMeta?.scripts || [])],
-			navLinks,
+			meta,
 			children: marked.parse(body),
 		})
 		if (filename === 'pages/home.js') {
-			filename = 'pages/index.js'
+			filename = 'pages'
 		}
-		const outFile = filename.replace('pages', 'dist').replace('.js', '.html')
-		fs.writeFileSync(outFile, page, {
+		const outDir = 'dist/' + filename.replace('.js', '')
+		console.log(outDir)
+		fs.mkdirSync(outDir, { recursive: true })
+		fs.writeFileSync(outDir + '/index.html', page, {
 			encoding: 'utf8',
 		})
 	})

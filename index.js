@@ -35,19 +35,22 @@ export const componentStyles = (components) => `
 	</style>
 `
 
-export const createTags = (data, type) =>
-	data
-		.map((tag) => {
-			const attrs = Object.keys(tag)
-				.map((key) => `${key}="${tag[key]}"`)
-				.join(' ')
-			if (type === 'script') {
-				return `<script ${attrs}></script>`
-			} else if (type === 'link') {
-				return `<link ${attrs}>`
-			}
-		})
-		.join('\n')
+export const createTags = (data, type) => {
+	return !!data
+		? data
+				.map((tag) => {
+					const attrs = Object.keys(tag)
+						.map((key) => `${key}="${tag[key]}"`)
+						.join(' ')
+					if (type === 'script') {
+						return `<script ${attrs}></script>`
+					} else if (type === 'link') {
+						return `<link ${attrs}>`
+					}
+				})
+				.join('\n')
+		: ''
+}
 
 export const embedCode = (file) =>
 	[
