@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { compileString } from 'sass'
 
 export const html = (strings, ...values) => {
 	let str = strings[0]
@@ -29,9 +30,13 @@ export const when = (condition, html) => (condition ? html : '<!-- -->')
 
 export const componentStyles = (components) => `
 	<style>
-		${Object.values(components)
-			.map((component) => component.style)
-			.join('\n')}
+		${
+			compileString(
+				Object.values(components)
+					.map((component) => component.style)
+					.join('\n')
+			).css
+		}
 	</style>
 `
 
