@@ -32,8 +32,7 @@ const writePage = (filename) => {
 		if (filename === 'pages/home.js') {
 			filename = 'pages'
 		}
-		const outDir = 'dist/' + filename.replace('.js', '')
-		console.log(outDir)
+		const outDir = filename.replace('pages', 'dist').replace('.js', '')
 		fs.mkdirSync(outDir, { recursive: true })
 		fs.writeFileSync(outDir + '/index.html', page, {
 			encoding: 'utf8',
