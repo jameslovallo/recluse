@@ -20,9 +20,6 @@ const marked = new Marked(
 	})
 )
 
-fs.rmSync('./dist', { recursive: true, force: true })
-fs.mkdirSync('./dist')
-
 const writePage = (filename) => {
 	import('../../' + filename).then(({ meta, body }) => {
 		const page = layout({
@@ -41,6 +38,7 @@ const writePage = (filename) => {
 }
 
 const writePages = (startPath, filter) => {
+	console.log('Building...')
 	if (!fs.existsSync(startPath)) {
 		console.log('directory does not exist: ', startPath)
 		return
@@ -58,6 +56,9 @@ const writePages = (startPath, filter) => {
 }
 
 export const productionBuild = () => {
+	fs.rmSync('./dist', { recursive: true, force: true })
+	fs.mkdirSync('./dist')
+
 	writePages('./pages', '.js')
 
 	fs.cp('./src', './dist/src', { recursive: true }, (err) => {
