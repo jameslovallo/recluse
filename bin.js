@@ -2,6 +2,7 @@
 
 import { program } from 'commander'
 import { productionBuild } from './build.mjs'
+import { devServer } from './dev.mjs'
 
 program
 	.version('1.0.0')
@@ -10,7 +11,7 @@ program
 	.option('-b, --build', 'Production Build')
 	.action((options) => {
 		if (options.dev) {
-			console.log('Dev Server')
+			devServer()
 		}
 		if (options.build) {
 			productionBuild()
