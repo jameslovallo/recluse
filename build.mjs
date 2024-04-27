@@ -57,8 +57,12 @@ const writePages = (startPath, filter) => {
 	}
 }
 
-writePages('./pages', '.js')
+export const productionBuild = () => {
+	writePages('./pages', '.js')
 
-fs.cp('./src', './dist/src', { recursive: true }, (err) => {
-	err && console.error(err)
-})
+	fs.cp('./src', './dist/src', { recursive: true }, (err) => {
+		err && console.error(err)
+	})
+}
+
+productionBuild()
