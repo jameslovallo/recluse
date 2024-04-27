@@ -5,7 +5,7 @@ import { Marked } from 'marked'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
-import layout from './src/layouts/default.js'
+import layout from '../../src/layouts/default.js'
 
 const marked = new Marked(
 	markedHighlight({
