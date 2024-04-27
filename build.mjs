@@ -64,5 +64,3 @@ export const productionBuild = () => {
 		err && console.error(err)
 	})
 }
-
-productionBuild()

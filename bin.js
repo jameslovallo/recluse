@@ -10,6 +10,7 @@ program
 	.option('-d, --dev', 'Dev Server')
 	.option('-b, --build', 'Production Build')
 	.action((options) => {
+		console.log(options)
 		if (options.dev) {
 			devServer()
 		}
