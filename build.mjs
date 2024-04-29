@@ -55,7 +55,7 @@ const writePages = (startPath, filter) => {
 	}
 }
 
-export const productionBuild = () => {
+export const build = () => {
 	fs.rmSync('./dist', { recursive: true, force: true })
 	fs.mkdirSync('./dist')
 
