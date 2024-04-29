@@ -29,10 +29,10 @@ export const component = (path) => {
 	if (!fs.existsSync(componentRoot + componentDir)) {
 		fs.mkdirSync(componentRoot + componentDir)
 	}
-	fs.writeFileSync(
-		`${componentRoot}${componentDir}/${kebab}.js`,
-		componentTemplate(camel, kebab)
-	)
+	const fileName = `${componentRoot}${componentDir}/${kebab}.js`
+	console.log(`Creating ${fileName}...`)
+	fs.writeFileSync(fileName, componentTemplate(camel, kebab))
+	console.log('Updating index.js...')
 	const components = fs
 		.readFileSync(`${componentRoot}index.js`, 'utf8')
 		.trim()
