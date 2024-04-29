@@ -3,7 +3,7 @@ import fs from 'fs'
 
 const componentTemplate = (camel, kebab) => `import { html, scss } from 'cuirk'
 
-export const ${camel} = ({name = 'World'}) => html\`
+export const ${camel} = ({ name = 'World' }) => html\`
 	<div class="${kebab}">
 		<h1>Hello $\{name}</h1>
 		<p>This is a static component.</p>
@@ -38,7 +38,6 @@ export const component = (path) => {
 		.trim()
 		.split('\n')
 	components.push(`export { ${camel} } from './${kebab}.js'`)
-	console.log(components)
 	fs.writeFileSync(
 		`${componentRoot}index.js`,
 		components.sort((a, b) => a.localeCompare(b)).join('\n')
