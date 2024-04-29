@@ -3,7 +3,7 @@ import fs from 'fs'
 
 const componentTemplate = (camel, kebab) => `import { html, scss } from 'cuirk'
 
-export const ${camel} = ({name}) => html\`
+export const ${camel} = ({name = 'World'}) => html\`
 	<div class="${kebab}">
 		<h1>Hello $\{name}</h1>
 		<p>This is a static component.</p>
@@ -12,7 +12,7 @@ export const ${camel} = ({name}) => html\`
 
 ${camel}.style = scss\`
 	.${kebab} {
-		h2 {
+		h1 {
 			color: dodgerblue;
 		}
 	}
