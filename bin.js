@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { build } from './build.mjs'
-import { component } from './component.mjs'
-import { dev } from './dev.mjs'
-import { page } from './page.mjs'
+import { build } from './bin/build.mjs'
+import { component } from './bin/component.mjs'
+import { dev } from './bin/dev.mjs'
+import { page } from './bin/page.mjs'
 
 const args = process.argv.slice(2)
 

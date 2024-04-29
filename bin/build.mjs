@@ -5,7 +5,7 @@ import { Marked } from 'marked'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
-import layout from '../../src/layouts/default.js'
+import layout from '../../../src/layouts/default.js'
 
 const marked = new Marked(
 	markedHighlight({
@@ -21,7 +21,7 @@ const marked = new Marked(
 )
 
 const writePage = (filename) => {
-	import('../../' + filename).then(({ meta, body }) => {
+	import('../../../' + filename).then(({ meta, body }) => {
 		const page = layout({
 			meta,
 			children: marked.parse(body),
