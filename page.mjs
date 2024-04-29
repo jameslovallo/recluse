@@ -14,10 +14,12 @@ Your content goes here.
 \`
 `
 
-export const page = async (path) => {
+export const page = (path) => {
 	const pageDirArr = path.split('/')
 	pageDirArr.splice(-1, 1)
 	const pageDir = pageDirArr.join('/')
-	await fs.mkdirSync('./pages/' + pageDir)
+	if (!fs.existsSync('./pages/' + pageDir)) {
+		fs.mkdirSync('./pages/' + pageDir)
+	}
 	fs.writeFileSync(`./pages/${path}.js`, pageTemplate)
 }
