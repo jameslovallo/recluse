@@ -43,13 +43,10 @@ const writePages = (startPath, filter) => {
 		console.log('directory does not exist: ', startPath)
 		return
 	}
-	const files = fs.readdirSync(startPath)
+	const files = fs.readdirSync(startPath, { recursive: true })
 	for (var i = 0; i < files.length; i++) {
 		var filename = path.join(startPath, files[i])
-		var stat = fs.lstatSync(filename)
-		if (stat.isDirectory()) {
-			buildHTML(filename, filter) //recurse
-		} else if (filename.endsWith(filter)) {
+		if (filename.endsWith(filter)) {
 			writePage(filename)
 		}
 	}
