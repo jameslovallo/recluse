@@ -42,6 +42,17 @@ export const componentStyles = (components) => `
 	</style>
 `
 
+export const componentScripts = (components) =>
+	Object.values(components)
+		.map((component) => {
+			if (component.init) {
+				const scriptArr = String(component.init).split('\n')
+				scriptArr.shift() && scriptArr.pop()
+				return `<script>${scriptArr.join('\n')}</script>`
+			}
+		})
+		.join('\n')
+
 export const createTags = (data, type) => {
 	return !!data
 		? data
