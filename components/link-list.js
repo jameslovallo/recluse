@@ -1,4 +1,5 @@
-import { html, icon, loop, scss, when } from '../index.js'
+import { html, loop, scss, when } from '../index.js'
+import { icon } from './icon.js'
 
 const iconLink = ({ icon: path, title, description, href }) => html`
 	<li>
