@@ -1,7 +1,7 @@
 {
 	"name": "cuirk",
 	"type": "module",
-	"version": "0.0.47",
+	"version": "0.0.48",
 	"description": "The static site generator for Cuick.js",
 	"main": "index.js",
 	"module": "index.js",
