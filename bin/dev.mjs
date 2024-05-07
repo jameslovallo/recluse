@@ -3,6 +3,8 @@
 import { execSync } from 'node:child_process'
 
 export const dev = () => {
+	console.log('Running build')
+	execSync('npm run build')
 	console.log('Starting Dev Server')
 	execSync(
 		"browser-sync dist --watch & nodemon -e js,css,html --watch src --watch pages --exec 'npm run build'",
