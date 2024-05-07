@@ -52,7 +52,7 @@ nav.style = scss`
 					display: none;
 				}
 
-				> button {
+				.trigger button {
 					background: transparent;
 					border: none;
 					border-radius: 50%;
