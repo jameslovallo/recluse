@@ -7,15 +7,25 @@
 			import { componentStyles, html } from './index.js'
 			document.head.innerHTML += componentStyles(components)
 			// playground
-			const { accordion, youtube } = components
+			const { accordion, linkList, youtube } = components
 			document.body.innerHTML = html`
-				<main style="max-width: 70ch; margin: auto;">
+				<main style="max-width: 70ch; margin: auto; padding: 2rem;">
 					<h2>Accordion</h2>
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
+					<h2>Link List</h2>
+					${linkList(
+						Array(4).fill({
+							icon: 'Github',
+							title: 'Github',
+							description: 'Github description',
+							href: 'https://github.com',
+						})
+					)}
 					<h2>YouTube</h2>
 					${youtube({})}
+					<h2>Link List</h2>
 				</main>
 			`
 			youtube.init()

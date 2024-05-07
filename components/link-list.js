@@ -47,6 +47,7 @@ linkList.style = scss`
 	
 			> .icon {
 				background: var(--c-primary);
+				color: var(--c-primary-color);
 				padding: 0.75rem;
 				border-radius: 100%;
 			}

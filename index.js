@@ -39,12 +39,14 @@ export const componentStyles = (components) => `
 			--c-primary-3: #1e90ff33;
 			--c-primary-hover: var(--c-primary-2);
 			--c-primary-active: var(--c-primary-3);
+			--c-primary-color: white;
 			--c-border: 1px solid #bbb;
 			--c-surface: white;
 			--c-surface-color: black;
 			background: #f0f3f9;
 			font-family: sans-serif;
 		}
+
 		html[theme=light] {
 			--c-border: 1px solid #bbb;
 			--c-surface: white;
@@ -53,6 +55,7 @@ export const componentStyles = (components) => `
 			color: black;
 			color-scheme: light;
 		}
+
 		@media (prefers-color-scheme: dark) {
 			:root {
 				--c-border: 1px solid #282828;
@@ -62,6 +65,7 @@ export const componentStyles = (components) => `
 				color: white;
 			}
 		}
+
 		html[theme=dark] {
 			--c-border: 1px solid #282828;
 			--c-surface: black;
@@ -70,6 +74,30 @@ export const componentStyles = (components) => `
 			color: white;
 			color-scheme: dark;
 		}
+		
+		:root,
+		body {
+			height: 100%;
+		}
+		
+		body {
+			margin: 0;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		img,
+		video {
+			display: block;
+			max-width: 100%;
+		}
+		
+		svg {
+			display: block;
+		}
+		
 		${
 			compileString(
 				Object.values(components)
