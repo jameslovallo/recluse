@@ -1,6 +1,5 @@
 import { html, loop, scss } from '../index.js'
-import { modal } from './modal.js'
-import { textLink } from './text-link.js'
+import { icon, modal, textLink } from './index.js'
 
 export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 	const left = links.filter(({ position }) => position === 'start')
