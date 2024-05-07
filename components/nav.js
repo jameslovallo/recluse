@@ -1,5 +1,4 @@
 import { html, loop, scss } from '../index.js'
-import { icon } from './icon.js'
 import { modal } from './modal.js'
 import { textLink } from './text-link.js'
 
@@ -12,7 +11,7 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 			<div>
 				${modal({
 					id: 'nav',
-					trigger: icon({ name: navIcon }),
+					trigger: html`<button>icon({ name: navIcon })</button>`,
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
 							${loop(links, textLink)}
@@ -55,7 +54,7 @@ nav.style = scss`
 				}
 			}
 
-			.dialog {
+			.modal {
 				@media (min-width: 768px) {
 					display: none;
 				}
