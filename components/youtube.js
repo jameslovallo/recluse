@@ -1,12 +1,16 @@
 import { html, scss } from '../index.js'
 
-export const youtube = ({ id = '1g3_CFmnU7k', label = 'Play video' }) => html`
+export const youtube = ({
+	id = '1g3_CFmnU7k',
+	label = 'Play video',
+	width = '100%',
+}) => html`
 	<div class="youtube">
 		<button
 			title="${label}"
 			aria-label="${label}"
 			data-id="${id}"
-			style="background: url(https://img.youtube.com/vi/${id}/hqdefault.jpg) no-repeat center center / cover;"
+			style="background: url(https://img.youtube.com/vi/${id}/hqdefault.jpg) no-repeat center center / cover; width: ${width};"
 		>
 			<svg class="icon" viewBox="0 0 68 48">
 				<path
