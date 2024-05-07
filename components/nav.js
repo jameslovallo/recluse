@@ -11,7 +11,7 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 			<div>
 				${modal({
 					id: 'nav',
-					trigger: html`<button>icon({ name: navIcon })</button>`,
+					trigger: html`<button>${icon({ name: navIcon })}</button>`,
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
 							${loop(links, textLink)}
