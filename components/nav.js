@@ -45,12 +45,6 @@ nav.style = scss`
 
 			&:last-child {
 				justify-content: end;
-
-				@media (max-width: 767px) {
-					a:not(:last-child) {
-						display: none;
-					}
-				}
 			}
 
 			.modal {
@@ -95,6 +89,12 @@ nav.style = scss`
 
 				&:active {
 					background: var(--c-primary-active);
+				}
+
+				@media (max-width: 767px) {
+					&:not(.show-on-mobile) {
+						display: none;
+					}
 				}
 			}
 		}
