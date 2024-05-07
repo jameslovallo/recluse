@@ -59,7 +59,20 @@ nav.style = scss`
 				}
 
 				> button {
-					padding: 0 .5rem;
+					background: transparent;
+					border: none;
+					border-radius: 50%;
+					cursor: pointer;
+					display: block;
+					padding: .5rem;
+
+					&:hover {
+						background: var(--c-primary-hover);
+					}
+
+					&:active {
+						background: var(--c-primary-active);
+					}
 				}
 
 				a {
@@ -77,7 +90,11 @@ nav.style = scss`
 				padding: 1rem .5rem;
 
 				&:hover {
-					background: #111;
+					background: var(--c-primary-hover);
+				}
+
+				&:active {
+					background: var(--c-primary-active);
 				}
 			}
 		}
