@@ -1,17 +1,15 @@
-import { html, scss, when } from '../index.js'
+import { html, scss } from '../index.js'
 
 export const modal = ({ trigger, close, children }) => html`
 	<div class="modal">
 		<div class="trigger">
-			${when(trigger, trigger)}
-			${when(!trigger, html`<button>Open Modal</button>`)}
+			${trigger ? trigger : html`<button>Open</button>`}
 		</div>
 		<dialog>
 			<div class="content">
 				<div class="scroll">${children}</div>
 				<form method="dialog">
-					${when(close, close)}
-					${when(!close, html`<button>Close Modal</button>`)}
+					${close ? close : html`<button>Close</button>`}
 				</form>
 			</div>
 		</dialog>
