@@ -9,11 +9,13 @@
 		"cuirk": "bin.js"
 	},
 	"scripts": {
+		"dev": "npx vite",
 		"update": "npm version patch && npm publish && git push"
 	},
 	"author": "James Lovallo",
 	"license": "ISC",
 	"dependencies": {
+		"@mdi/js": "^7.4.47",
 		"browser-sync": "^3.0.2",
 		"change-case": "^5.4.4",
 		"marked": "^12.0.1",

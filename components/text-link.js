@@ -1,4 +1,4 @@
-import { html } from 'cuirk'
+import { html } from '../index.js'
 
 export const textLink = ({ title, href, target = '_self', classList }) => {
 	const c = classList ? ` class="${classList.join(' ')}"` : ''
