@@ -1,6 +1,6 @@
 import { html, loop, scss } from '../index.js'
-import { dialog } from './dialog.js'
 import { icon } from './icon.js'
+import { modal } from './modal.js'
 import { textLink } from './text-link.js'
 
 export const nav = ({ links, icon: navIcon = 'Menu' }) => {
@@ -10,7 +10,7 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 	return html`
 		<nav>
 			<div>
-				${dialog({
+				${modal({
 					id: 'nav',
 					trigger: icon({ name: navIcon }),
 					children: html`
