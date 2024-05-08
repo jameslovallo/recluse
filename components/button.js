@@ -39,7 +39,7 @@ button.style = scss`
 		height: 2em;
 		justify-content: center;
 		overflow: hidden;
-		padding: 0 0.75em;
+		padding: 0 0.75rem;
 		position: relative;
 		text-decoration: none;
 		vertical-align: middle;
@@ -91,6 +91,7 @@ button.style = scss`
 		&.sm {
 			font-size: 0.75rem;
 			letter-spacing: 1px;
+			padding: 0 0.5rem;
 		}
 
 		&.lg {

@@ -7,8 +7,18 @@
 			import { componentStyles, html } from './index.js'
 			document.head.innerHTML += componentStyles(components)
 			// playground
-			const { accordion, button, icon, linkList, modal, nav, youtube } =
-				components
+			const {
+				accordion,
+				button,
+				card,
+				cardBody,
+				cardActions,
+				icon,
+				linkList,
+				modal,
+				nav,
+				youtube,
+			} = components
 			document.body.innerHTML = html`
 				<main style="max-width: 70ch; margin: auto; padding: 2rem;">
 					<h2>Accordion</h2>
@@ -35,6 +45,25 @@
 					${button({ children: icon({}) + 'Button', size: 'sm' })}
 					${button({ children: icon({}) + 'Button' })}
 					${button({ children: icon({}) + 'Button', shape: 'lg' })}
+					<h2>Card</h2>
+					${card([
+						html`<img src="https://picsum.photos/400/200" />`,
+						cardBody({ title: 'Title', subtitle: 'Subtitle', copy: 'Copy' }),
+						cardActions([
+							button({
+								children: 'Button',
+								shape: 'rounded',
+								variant: 'ghost',
+								size: 'sm',
+							}),
+							button({
+								children: 'Button',
+								shape: 'rounded',
+								variant: 'ghost',
+								size: 'sm',
+							}),
+						]),
+					])}
 					<h2>Link List</h2>
 					${linkList(
 						Array(3).fill({

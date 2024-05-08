@@ -97,6 +97,12 @@ export const componentStyles = (components) => `
 		svg {
 			display: block;
 		}
+
+		.surface {
+			background: var(--c-surface);
+			border: var(--c-border);
+			color: var(--c-surface-color);
+		}
 		
 		${
 			compileString(

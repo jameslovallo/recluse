@@ -10,16 +10,12 @@ const accordionItem = ({ title, children }) => html`
 `
 
 export const accordion = (items) => html`
-	<div class="accordion">${loop(items, accordionItem)}</div>
+	<div class="accordion surface">${loop(items, accordionItem)}</div>
 `
 
 accordion.style = scss`
 	.accordion {
 		> .item {
-			background: var(--c-surface);
-			border: var(--c-border);
-			color: var(--c-surface-color);
-
 			summary {
 				align-items: center;
 				cursor: pointer;
@@ -68,8 +64,8 @@ accordion.style = scss`
 				padding: var(--accordion-child-padding, .75em);
 			}
 
-			+ .accordion {
-				border-top: none;
+			+ .item {
+				border-top: var(--c-border);
 			}
 		}
 	}
