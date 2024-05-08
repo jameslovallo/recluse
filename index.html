@@ -1,4 +1,4 @@
-<html theme="light">
+<html theme="dark">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Components</title>
@@ -7,20 +7,39 @@
 			import { componentStyles, html } from './index.js'
 			document.head.innerHTML += componentStyles(components)
 			// playground
-			const { accordion, linkList, youtube } = components
+			const { accordion, button, icon, linkList, youtube } = components
 			document.body.innerHTML = html`
 				<main style="max-width: 70ch; margin: auto; padding: 2rem;">
 					<h2>Accordion</h2>
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
+					<h2>Button Variants</h2>
+					${button({ children: 'Button' })}
+					${button({ children: 'Button', variant: 'outlined' })}
+					${button({ children: 'Button', variant: 'subtle' })}
+					${button({ children: 'Button', variant: 'ghost' })}
+					<h2>Button Sizes</h2>
+					${button({ children: 'Button', size: 'sm' })}
+					${button({ children: 'Button' })}
+					${button({ children: 'Button', size: 'lg' })}
+					<h2>Button Shapes</h2>
+					${button({ children: 'Button' })}
+					${button({ children: 'Button', shape: 'rounded' })}
+					${button({ children: 'Button', shape: 'pill' })}
+					${button({ children: icon({}), shape: 'square' })}
+					${button({ children: icon({}), shape: 'circle' })}
+					<h2>Buttons with Icons and Text</h2>
+					${button({ children: icon({}) + 'Button', size: 'sm' })}
+					${button({ children: icon({}) + 'Button' })}
+					${button({ children: icon({}) + 'Button', shape: 'lg' })}
 					<h2>Link List</h2>
 					${linkList(
-						Array(4).fill({
+						Array(3).fill({
 							icon: 'Github',
-							title: 'Github',
-							description: 'Github description',
-							href: 'https://github.com',
+							title: 'Title',
+							description: 'Description',
+							href: '#',
 						})
 					)}
 					<h2>YouTube</h2>
