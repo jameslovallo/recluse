@@ -26,18 +26,18 @@
 						Array(3).fill({ title: 'Accordion 1', children: 'Content' })
 					)}
 					<h2>Button Variants</h2>
-					${button({ children: 'Button' })}
-					${button({ children: 'Button', variant: 'outlined' })}
-					${button({ children: 'Button', variant: 'subtle' })}
-					${button({ children: 'Button', variant: 'ghost' })}
+					${button({ children: 'Filled Button' })}
+					${button({ children: 'Outlined Button', variant: 'outlined' })}
+					${button({ children: 'Subtle Button', variant: 'subtle' })}
+					${button({ children: 'Ghost Button', variant: 'ghost' })}
 					<h2>Button Sizes</h2>
-					${button({ children: 'Button', size: 'sm' })}
-					${button({ children: 'Button' })}
-					${button({ children: 'Button', size: 'lg' })}
+					${button({ children: 'sm', size: 'sm' })}
+					${button({ children: 'md' })}
+					${button({ children: 'lg', size: 'lg' })}
 					<h2>Button Shapes</h2>
-					${button({ children: 'Button' })}
-					${button({ children: 'Button', shape: 'rounded' })}
-					${button({ children: 'Button', shape: 'pill' })}
+					${button({ children: 'squared' })}
+					${button({ children: 'rounded', shape: 'rounded' })}
+					${button({ children: 'pill', shape: 'pill' })}
 					${button({ children: icon({}), shape: 'square' })}
 					${button({ children: icon({}), shape: 'rounded square' })}
 					${button({ children: icon({}), shape: 'circle' })}
@@ -78,12 +78,6 @@
 						links: [
 							{
 								href: '#',
-								title: 'Link 1',
-								desktop: 'start',
-								mobile: 'center',
-							},
-							{
-								href: '#',
 								title: 'Logo',
 								desktop: 'center',
 								mobile: 'start',
@@ -91,7 +85,25 @@
 							},
 							{
 								href: '#',
+								title: 'Link 1',
+								desktop: 'start',
+								mobile: 'center',
+							},
+							{
+								href: '#',
 								title: 'Link 2',
+								desktop: 'start',
+								mobile: 'center',
+							},
+							{
+								href: '#',
+								title: 'Link 3',
+								desktop: 'end',
+								mobile: 'center',
+							},
+							{
+								href: '#',
+								title: 'Link 4',
 								desktop: 'end',
 								mobile: 'center',
 								classList: ['show-on-mobile'],

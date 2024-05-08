@@ -1,9 +1,11 @@
 import { html, loop, scss } from '../index.js'
+import { icon } from './icon.js'
 
 const accordionItem = ({ title, children }) => html`
 	<details class="item">
 		<summary>
 			<span>${title}</span>
+			${icon({ name: 'ChevronDown' })}
 		</summary>
 		<div class="children">${children}</div>
 	</details>
@@ -29,22 +31,8 @@ accordion.style = scss`
 					display: none;
 				}
 
-				&:after {
-					border-bottom: 1px solid currentcolor;
-					border-right: 1px solid currentcolor;
-					content: "";
-					height: 0.5em;
-					transform: translatey(-25%) rotate(45deg);
-					transform-origin: center;
-					transition: transform 0.25s;
-					width: 0.5em;
-				}
-
 				&:hover {
 					background: var(--c-primary-hover);
-					&:after {
-						border-color: var(--c-primary);
-					}
 				}
 
 				&:active {
@@ -54,10 +42,10 @@ accordion.style = scss`
 				span {
 					z-index: 1;
 				}
-			}
 
-			&[open] summary:after {
-				transform: translatey(25%) rotate(225deg);
+				.mdi {
+					transition: transform 0.2s ease-in-out;
+				}
 			}
 
 			> .children {
@@ -66,6 +54,12 @@ accordion.style = scss`
 
 			+ .item {
 				border-top: var(--c-border);
+			}
+
+			&[open] > summary {
+				.mdi {
+					transform: rotate(180deg);
+				}
 			}
 		}
 	}
