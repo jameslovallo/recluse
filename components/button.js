@@ -2,12 +2,12 @@ import { html, scss } from '../index.js'
 
 export const button = ({
 	children,
-	variant = 'filled',
-	size = 'md',
-	shape = 'squared',
+	variant = 'filled', // filled, outlined, subtle, ghost
+	size = 'md', // sm, md, lg
+	shape = 'squared', // squared, rounded, pill, square, circle
 	href,
 	target = '_self',
-	type,
+	type, // i.e. submit
 }) => {
 	const classList = ['button', variant, shape, size].join(' ')
 	return href
