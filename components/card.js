@@ -20,7 +20,7 @@ card.style = scss`
 		> img {
 			width: 100%;
 		}
-		
+
 		> .body {
 			padding: 1rem;
 
@@ -33,6 +33,7 @@ card.style = scss`
 			}
 
 			> h4 {
+				font-weight: normal;
 				margin-bottom: 0.5em;
 			}
 
@@ -43,7 +44,11 @@ card.style = scss`
 		}
 
 		> .actions {
-			&:has(.ghost)	{
+			display: flex;
+			gap: 0.5rem;
+			padding: 1rem;
+
+			&:has(.ghost:first-child)	{
 				padding: 0.25rem;
 
 				&:has(.sm) {

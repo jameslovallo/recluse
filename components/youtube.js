@@ -29,8 +29,14 @@ youtube.init = () => {
 			const iframe = document.createElement('iframe')
 			iframe.src = `https://www.youtube.com/embed/${button.dataset.id}?autoplay=1`
 			iframe.title = 'YouTube video player'
-			iframe.allow =
-				'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+			iframe.allow = [
+				'accelerometer',
+				'autoplay',
+				'clipboard-write',
+				'encrypted-media',
+				'gyroscope',
+				'picture-in-picture',
+			].join('; ')
 			iframe.allowFullscreen = true
 			button.replaceWith(iframe)
 		})

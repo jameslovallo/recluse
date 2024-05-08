@@ -54,7 +54,7 @@ linkList.style = scss`
 	
 			> .text {
 				display: grid;
-				gap: .5rem;
+				gap: .33rem;
 				line-height: 1;
 	
 				small {

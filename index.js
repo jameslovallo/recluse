@@ -43,36 +43,6 @@ export const componentStyles = (components) => `
 			--c-border: 1px solid #bbb;
 			--c-surface: white;
 			--c-surface-color: black;
-			background: #f0f3f9;
-			font-family: sans-serif;
-		}
-
-		html[theme=light] {
-			--c-border: 1px solid #bbb;
-			--c-surface: white;
-			--c-surface-color: black;
-			background: #f0f3f9;
-			color: black;
-			color-scheme: light;
-		}
-
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--c-border: 1px solid #282828;
-				--c-surface: black;
-				--c-surface-color: white;
-				background: #212325;
-				color: white;
-			}
-		}
-
-		html[theme=dark] {
-			--c-border: 1px solid #282828;
-			--c-surface: black;
-			--c-surface-color: white;
-			background: #212325;
-			color: white;
-			color-scheme: dark;
 		}
 		
 		:root,

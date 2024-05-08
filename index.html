@@ -48,19 +48,25 @@
 					<h2>Card</h2>
 					${card([
 						html`<img src="https://picsum.photos/400/200" />`,
-						cardBody({ title: 'Title', subtitle: 'Subtitle', copy: 'Copy' }),
+						cardBody({
+							title: 'A very impressive title',
+							subtitle: 'What are subtitles even for?',
+							copy: 'Blah blah blah blah blah blah blah blah',
+						}),
 						cardActions([
 							button({
-								children: 'Button',
-								shape: 'rounded',
-								variant: 'ghost',
-								size: 'sm',
+								children: icon({ name: 'Play' }),
+								shape: 'circle',
 							}),
 							button({
 								children: 'Button',
 								shape: 'rounded',
 								variant: 'ghost',
-								size: 'sm',
+							}),
+							button({
+								children: 'Button',
+								shape: 'rounded',
+								variant: 'ghost',
 							}),
 						]),
 					])}
@@ -113,6 +119,11 @@
 					<h2>YouTube</h2>
 					${youtube({})}
 				</main>
+				<style>
+					:root {
+						font-family: sans-serif;
+					}
+				</style>
 			`
 			modal.init()
 			youtube.init()
