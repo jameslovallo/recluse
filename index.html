@@ -7,8 +7,16 @@
 			import { componentStyles, html } from './index.js'
 			document.head.innerHTML += componentStyles(components)
 			// playground
-			const { accordion, button, icon, linkList, youtube } = components
+			const { accordion, button, icon, linkList, modal, nav, youtube } =
+				components
 			document.body.innerHTML = html`
+				${nav({
+					links: [
+						{ href: '#', title: 'Link 1', position: 'start' },
+						{ href: '#', title: 'Logo', position: 'center' },
+						{ href: '#', title: 'Link 2', position: 'end' },
+					],
+				})}
 				<main style="max-width: 70ch; margin: auto; padding: 2rem;">
 					<h2>Accordion</h2>
 					${accordion({ title: 'Accordion 1', children: 'Content' })}
@@ -47,6 +55,7 @@
 					${youtube({})}
 				</main>
 			`
+			modal.init()
 			youtube.init()
 		</script>
 	</head>

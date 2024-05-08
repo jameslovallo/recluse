@@ -1,15 +1,16 @@
 import { html, scss } from '../index.js'
+import { button } from './button.js'
 
 export const modal = ({ trigger, close, children }) => html`
 	<div class="modal">
 		<div class="trigger">
-			${trigger ? trigger : html`<button>Open</button>`}
+			${trigger ? trigger : button({ children: 'Open', shape: 'pill' })}
 		</div>
 		<dialog>
 			<div class="content">
 				<div class="scroll">${children}</div>
 				<form method="dialog">
-					${close ? close : html`<button>Close</button>`}
+					${close ? close : button({ children: 'Close', shape: 'pill' })}
 				</form>
 			</div>
 		</dialog>
@@ -27,15 +28,6 @@ modal.init = () => {
 
 modal.style = scss`
 	.modal {
-		> button {
-			background: transparent;
-			border: none;
-			border-radius: 0;
-			cursor: pointer;
-			display: block;
-			padding: 0;
-		}
-
 		dialog[open] {
 			align-items: center;
 			border: none;

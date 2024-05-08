@@ -1,5 +1,5 @@
 import { html, loop, scss } from '../index.js'
-import { icon, modal, textLink } from './index.js'
+import { button, icon, modal, textLink } from './index.js'
 
 export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 	const left = links.filter(({ position }) => position === 'start')
@@ -10,7 +10,12 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 			<div>
 				${modal({
 					id: 'nav',
-					trigger: html`<button>${icon({ name: navIcon })}</button>`,
+					trigger: button({
+						children: icon({ name: navIcon }),
+						shape: 'circle',
+						size: 'lg',
+						variant: 'ghost',
+					}),
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
 							${loop(links, textLink)}
@@ -33,6 +38,7 @@ nav.style = scss`
 		font-size: 15px;
 		gap: 1rem;
 		grid-template-columns: repeat(3, auto);
+		height: 3rem;
 		padding: 0 .5rem;
 
 		> div {
@@ -52,21 +58,8 @@ nav.style = scss`
 					display: none;
 				}
 
-				.trigger button {
-					background: transparent;
-					border: none;
-					border-radius: 50%;
-					cursor: pointer;
-					display: block;
-					padding: .5rem;
-
-					&:hover {
-						background: var(--c-primary-hover);
-					}
-
-					&:active {
-						background: var(--c-primary-active);
-					}
+				.trigger .button {
+					--c-primary: white;
 				}
 
 				a {
