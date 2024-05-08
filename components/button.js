@@ -7,6 +7,7 @@ export const button = ({
 	shape = 'squared',
 	href,
 	target = '_self',
+	type,
 }) => {
 	const classList = ['button', variant, shape, size].join(' ')
 	return href
@@ -17,7 +18,7 @@ export const button = ({
 				</a>
 		  `
 		: html`
-				<button class="${classList}">
+				<button class="${classList}" ${type ? `type="${type}"` : ''}>
 					<span class="hover-cover"></span>
 					${children}
 				</button>
