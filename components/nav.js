@@ -2,9 +2,12 @@ import { html, loop, scss } from '../index.js'
 import { button, icon, modal, textLink } from './index.js'
 
 export const nav = ({ links, icon: navIcon = 'Menu' }) => {
-	const left = links.filter(({ position }) => position === 'start')
-	const center = links.filter(({ position }) => position === 'center')
-	const right = links.filter(({ position }) => position === 'end')
+	const desktopStart = links.filter(({ desktop }) => desktop === 'start')
+	const desktopCenter = links.filter(({ desktop }) => desktop === 'center')
+	const desktopEnd = links.filter(({ desktop }) => desktop === 'end')
+	const mobileStart = links.filter(({ mobile }) => mobile === 'start')
+	const mobileCenter = links.filter(({ mobile }) => mobile === 'center')
+	const mobileEnd = links.filter(({ mobile }) => mobile === 'end')
 	return html`
 		<nav>
 			<div>
@@ -18,14 +21,14 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 					}),
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
-							${loop(links, textLink)}
+							${loop([...mobileStart, ...mobileCenter, ...mobileEnd], textLink)}
 						</div>
 					`,
 				})}
-				${loop(left, textLink)}
+				${loop(desktopStart, textLink)}
 			</div>
-			<div>${loop(center, textLink)}</div>
-			<div>${loop(right, textLink)}</div>
+			<div>${loop(desktopCenter, textLink)}</div>
+			<div>${loop(desktopEnd, textLink)}</div>
 		</nav>
 	`
 }

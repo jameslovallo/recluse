@@ -10,18 +10,11 @@
 			const { accordion, button, icon, linkList, modal, nav, youtube } =
 				components
 			document.body.innerHTML = html`
-				${nav({
-					links: [
-						{ href: '#', title: 'Link 1', position: 'start' },
-						{ href: '#', title: 'Logo', position: 'center' },
-						{ href: '#', title: 'Link 2', position: 'end' },
-					],
-				})}
 				<main style="max-width: 70ch; margin: auto; padding: 2rem;">
 					<h2>Accordion</h2>
-					${accordion({ title: 'Accordion 1', children: 'Content' })}
-					${accordion({ title: 'Accordion 1', children: 'Content' })}
-					${accordion({ title: 'Accordion 1', children: 'Content' })}
+					${accordion(
+						Array(3).fill({ title: 'Accordion 1', children: 'Content' })
+					)}
 					<h2>Button Variants</h2>
 					${button({ children: 'Button' })}
 					${button({ children: 'Button', variant: 'outlined' })}
@@ -51,6 +44,31 @@
 							href: '#',
 						})
 					)}
+					<h2>Nav</h2>
+					${nav({
+						links: [
+							{
+								href: '#',
+								title: 'Link 1',
+								desktop: 'start',
+								mobile: 'center',
+							},
+							{
+								href: '#',
+								title: 'Logo',
+								desktop: 'center',
+								mobile: 'start',
+								classList: ['show-on-mobile'],
+							},
+							{
+								href: '#',
+								title: 'Link 2',
+								desktop: 'end',
+								mobile: 'center',
+								classList: ['show-on-mobile'],
+							},
+						],
+					})}
 					<h2>YouTube</h2>
 					${youtube({})}
 				</main>
