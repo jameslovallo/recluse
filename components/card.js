@@ -44,6 +44,7 @@ card.style = scss`
 		}
 
 		> .actions {
+			align-items: center;
 			display: flex;
 			gap: 0.5rem;
 			padding: 1rem;
