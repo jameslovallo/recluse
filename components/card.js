@@ -1,19 +1,20 @@
-import { html, scss, when } from '../index.js'
+import { html, renderChildren, scss, when } from '../index.js'
 
 export const card = ({ children }) =>
-	html`<div class="card surface">${children.join('')}</div>`
+	html`<div class="card surface">${renderChildren(children)}</div>`
 
-export const cardBody = ({ title, subtitle, copy }) =>
+export const cardBody = ({ title, subtitle, copy, children }) =>
 	html`
 		<div class="body">
 			${when(title, html`<h3>${title}</h3>`)}
 			${when(subtitle, html`<h4>${subtitle}</h4>`)}
 			${when(copy, html`<p>${copy}</p>`)}
+			${when(children, renderChildren(children))}
 		</div>
 	`
 
 export const cardActions = ({ children }) =>
-	html`<div class="actions">${children.join('')}</div>`
+	html`<div class="actions">${renderChildren(children)}</div>`
 
 card.style = scss`
 	.card {

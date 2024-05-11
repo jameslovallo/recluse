@@ -28,6 +28,9 @@ export const loop = (arr, template) => {
 		.join('')
 }
 
+export const renderChildren = (children) =>
+	Array.isArray(children) ? children.join('') : children
+
 export const when = (condition, html) => (condition ? html : '<!-- -->')
 
 export const componentStyles = (components) => `

@@ -46,48 +46,52 @@
 					${button({ children: icon({}) + 'Button' })}
 					${button({ children: icon({}) + 'Button', shape: 'lg' })}
 					<h2>Card</h2>
-					${card([
-						html`<img src="https://picsum.photos/400/200" />`,
-						cardBody({
-							title: 'A very impressive title',
-							subtitle: 'What are subtitles even for?',
-							copy: 'Blah blah blah blah blah blah blah blah',
-						}),
-						cardActions([
-							button({
-								children: icon({ name: 'Play' }),
-								shape: 'circle',
-								size: 'lg',
+					${card({
+						children: [
+							html`<img src="https://picsum.photos/400/200" />`,
+							cardBody({
+								title: 'A very impressive title',
+								subtitle: 'What are subtitles even for?',
+								copy: 'Blah blah blah blah blah blah blah blah',
 							}),
-							html`<div style="width: .5rem"></div>`,
-							button({
-								children: icon({ name: 'SkipPrevious' }),
-								shape: 'circle',
-								variant: 'ghost',
+							cardActions({
+								children: [
+									button({
+										children: icon({ name: 'Play' }),
+										shape: 'circle',
+										size: 'lg',
+									}),
+									html`<div style="width: .5rem"></div>`,
+									button({
+										children: icon({ name: 'SkipPrevious' }),
+										shape: 'circle',
+										variant: 'ghost',
+									}),
+									button({
+										children: icon({ name: 'SkipNext' }),
+										shape: 'circle',
+										variant: 'ghost',
+									}),
+									html`<div style="flex-grow: 1"></div>`,
+									button({
+										children: icon({ name: 'Shuffle' }),
+										shape: 'circle',
+										variant: 'ghost',
+									}),
+									button({
+										children: icon({ name: 'Repeat' }),
+										shape: 'circle',
+										variant: 'ghost',
+									}),
+									button({
+										children: icon({ name: 'Subtitles' }),
+										shape: 'circle',
+										variant: 'ghost',
+									}),
+								],
 							}),
-							button({
-								children: icon({ name: 'SkipNext' }),
-								shape: 'circle',
-								variant: 'ghost',
-							}),
-							html`<div style="flex-grow: 1"></div>`,
-							button({
-								children: icon({ name: 'Shuffle' }),
-								shape: 'circle',
-								variant: 'ghost',
-							}),
-							button({
-								children: icon({ name: 'Repeat' }),
-								shape: 'circle',
-								variant: 'ghost',
-							}),
-							button({
-								children: icon({ name: 'Subtitles' }),
-								shape: 'circle',
-								variant: 'ghost',
-							}),
-						]),
-					])}
+						],
+					})}
 					<h2>Link List</h2>
 					${linkList(
 						Array(3).fill({

@@ -1,4 +1,4 @@
-import { html, loop, scss } from '../index.js'
+import { html, loop, renderChildren, scss } from '../index.js'
 import { icon } from './icon.js'
 
 const accordionItem = ({ title, children }) => html`
@@ -7,7 +7,7 @@ const accordionItem = ({ title, children }) => html`
 			<span>${title}</span>
 			${icon({ name: 'ChevronDown' })}
 		</summary>
-		<div class="children">${children}</div>
+		<div class="children">${renderChildren(children)}</div>
 	</details>
 `
 

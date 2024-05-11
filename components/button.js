@@ -1,4 +1,4 @@
-import { html, scss } from '../index.js'
+import { html, renderChildren, scss } from '../index.js'
 
 export const button = ({
 	children,
@@ -14,13 +14,13 @@ export const button = ({
 		? html`
 				<a href="${href}" target="${target}" class="${classList}">
 					<span class="hover-cover"></span>
-					${children}
+					${renderChildren(children)}
 				</a>
 		  `
 		: html`
 				<button class="${classList}" ${type ? `type="${type}"` : ''}>
 					<span class="hover-cover"></span>
-					${children}
+					${renderChildren(children)}
 				</button>
 		  `
 }

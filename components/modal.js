@@ -1,4 +1,4 @@
-import { html, scss } from '../index.js'
+import { html, renderChildren, scss } from '../index.js'
 import { button } from './button.js'
 
 export const modal = ({ trigger, close, children }) => html`
@@ -8,7 +8,7 @@ export const modal = ({ trigger, close, children }) => html`
 		</div>
 		<dialog>
 			<div class="content">
-				<div class="scroll">${children}</div>
+				<div class="scroll">${renderChildren(children)}</div>
 				<form method="dialog">
 					${close ? close : button({ children: 'Close', shape: 'pill' })}
 				</form>
