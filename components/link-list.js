@@ -1,10 +1,12 @@
 import { html, loop, scss, when } from '../index.js'
 import { icon } from './icon.js'
 
-const iconLink = ({ icon: path, title, description, href }) => html`
+const iconLink = ({ icon: name, title, description, href }) => html`
 	<li>
 		<a href="${href}">
-			<span class="icon">${icon({ name: path })}</span>
+			<span class="icon">
+				${name.startsWith('<') ? name : icon({ name })}
+			</span>
 			<span class="text">
 				${when(title, html`<span>${title}</span>`)}
 				${when(description, html`<small>${description}</small>`)}
