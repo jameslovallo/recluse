@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
+import { minify } from 'html-minifier'
 import { Marked } from 'marked'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
@@ -31,7 +32,7 @@ const writePage = (filename) => {
 		}
 		const outDir = filename.replace('pages', 'dist').replace('.js', '')
 		fs.mkdirSync(outDir, { recursive: true })
-		fs.writeFileSync(outDir + '/index.html', page, {
+		fs.writeFileSync(outDir + '/index.html', minify(page), {
 			encoding: 'utf8',
 		})
 	})
