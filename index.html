@@ -42,9 +42,9 @@
 					${button({ children: icon({}), shape: 'rounded square' })}
 					${button({ children: icon({}), shape: 'circle' })}
 					<h2>Buttons with Icons and Text</h2>
-					${button({ children: icon({}) + 'Button', size: 'sm' })}
-					${button({ children: icon({}) + 'Button' })}
-					${button({ children: icon({}) + 'Button', shape: 'lg' })}
+					${button({ children: [icon({}), 'Button'], size: 'sm' })}
+					${button({ children: [icon({}), 'Button'] })}
+					${button({ children: [icon({}), 'Button'], shape: 'lg' })}
 					<h2>Card</h2>
 					${card({
 						children: [
