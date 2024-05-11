@@ -1,6 +1,6 @@
 import { html, scss, when } from '../index.js'
 
-export const card = (children) =>
+export const card = ({ children }) =>
 	html`<div class="card surface">${children.join('')}</div>`
 
 export const cardBody = ({ title, subtitle, copy }) =>
@@ -12,7 +12,7 @@ export const cardBody = ({ title, subtitle, copy }) =>
 		</div>
 	`
 
-export const cardActions = (children) =>
+export const cardActions = ({ children }) =>
 	html`<div class="actions">${children.join('')}</div>`
 
 card.style = scss`
