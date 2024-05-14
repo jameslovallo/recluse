@@ -9,6 +9,7 @@
 			// playground
 			const {
 				accordion,
+				badge,
 				button,
 				card,
 				cardBody,
@@ -25,6 +26,8 @@
 					${accordion(
 						Array(3).fill({ title: 'Accordion 1', children: 'Content' })
 					)}
+					<h2>Badge</h2>
+					${badge({ title: icon({ name: 'Home' }) })}
 					<h2>Button Variants</h2>
 					${button({ children: 'Filled Button' })}
 					${button({ children: 'Outlined Button', variant: 'outlined' })}

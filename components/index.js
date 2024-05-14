@@ -1,4 +1,5 @@
 export { accordion } from './accordion.js'
+export { badge } from './badge.js'
 export { button } from './button.js'
 export { card, cardActions, cardBody } from './card.js'
 export { icon } from './icon.js'

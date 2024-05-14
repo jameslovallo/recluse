@@ -46,6 +46,7 @@ export const componentStyles = (components) => `
 			--c-border: 1px solid #bbb;
 			--c-surface: white;
 			--c-surface-color: black;
+			--c-surface-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
 		}
 		
 		:root,
