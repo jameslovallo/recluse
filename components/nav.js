@@ -62,7 +62,7 @@ nav.style = scss`
 				}
 
 				.trigger .button {
-					--c-primary: white;
+					--c-primary: var(--nav-color, white);
 				}
 
 				a {
@@ -71,13 +71,10 @@ nav.style = scss`
 				}
 			}
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
 			> a {
+				color: inherit;
 				padding: 1rem .5rem;
+				text-decoration: none;
 
 				&:hover {
 					background: var(--c-primary-hover);
