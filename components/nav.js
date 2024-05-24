@@ -71,10 +71,13 @@ nav.style = scss`
 				}
 			}
 
-			> a {
+			a {
 				color: inherit;
-				padding: 1rem .5rem;
 				text-decoration: none;
+			}
+
+			> a {
+				padding: 1rem .5rem;
 
 				&:hover {
 					background: var(--c-primary-hover);
