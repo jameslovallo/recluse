@@ -2,6 +2,7 @@
 
 import fs from 'fs'
 import { Marked } from 'marked'
+import { gfmHeadingId } from 'marked-gfm-heading-id'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
@@ -18,7 +19,7 @@ const marked = new Marked(
 			}
 		},
 	})
-)
+).use(gfmHeadingId)
 
 const writePage = (filename) => {
 	import('../../../' + filename).then(({ meta, body }) => {
