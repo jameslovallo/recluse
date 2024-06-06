@@ -19,7 +19,7 @@ const marked = new Marked(
 			}
 		},
 	})
-).use(gfmHeadingId)
+).use(gfmHeadingId())
 
 const writePage = (filename) => {
 	import('../../../' + filename).then(({ meta, body }) => {
