@@ -1,19 +1,15 @@
 import fs from 'fs'
 import { compileString } from 'sass'
 
-export const html = (strings, ...values) => {
-	let str = strings[0]
-	for (let i = 0; i < values.length; i++) {
-		str += values[i] + strings[i + 1]
-	}
-	return str.trim()
+const combine = (strings, ...values) => {
+	return strings.map((string, i) => string.trim() + (values[i] || '')).join('')
 }
 
-export const md = html
-
-export const css = (s) => s
-export const scss = (s) => s
-export const sass = (s) => s
+export const html = combine
+export const md = combine
+export const css = combine
+export const scss = combine
+export const sass = combine
 
 export const loop = (arr, template) => {
 	if (typeof arr === 'number') {
