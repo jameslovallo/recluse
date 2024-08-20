@@ -7,6 +7,7 @@ import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
 import layout from '../../../src/layouts/default.js'
+import buildCallback from '../../src/build.js'
 
 const marked = new Marked(
 	markedHighlight({
@@ -58,6 +59,7 @@ export const build = () => {
 	fs.mkdirSync('./dist')
 
 	writePages('./pages', '.js')
+	buildCallback()
 
 	fs.cp('./src', './dist/src', { recursive: true }, (err) => {
 		err && console.error(err)
