@@ -58,7 +58,6 @@ export const build = () => {
 	fs.mkdirSync('./dist')
 
 	writePages('./pages', '.js')
-	import('../../../src/build.js').then((m) => m.default())
 
 	fs.cp('./src', './dist/src', { recursive: true }, (err) => {
 		err && console.error(err)
