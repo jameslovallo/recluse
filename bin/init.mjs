@@ -1,18 +1,18 @@
 import fs from 'fs'
 
 export const init = () => {
-	fs.cp('./starters/basic/package.json', '../../../package.json', (err) => {
+	fs.cp('../starters/basic/package.json', '../../../package.json', (err) => {
 		err && console.error(err)
 	})
 	fs.cp(
-		'./starters/basic/pages',
+		'../starters/basic/pages',
 		'../../../pages',
 		{ recursive: true },
 		(err) => {
 			err && console.error(err)
 		}
 	)
-	fs.cp('./starters/basic/src', '../../../src', { recursive: true }, (err) => {
+	fs.cp('../starters/basic/src', '../../../src', { recursive: true }, (err) => {
 		err && console.error(err)
 	})
 }
