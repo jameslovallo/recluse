@@ -1,7 +1,7 @@
 {
 	"type": "module",
 	"dependencies": {
-		"cuirk": "^0.0.74"
+		"cuirk": "latest"
 	},
 	"scripts": {
 		"dev": "cuirk dev",
