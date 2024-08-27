@@ -62,6 +62,7 @@ contactForm.style = scss`
 
 			input,
 			textarea {
+				background: #eee;
 				border: none;
 				border-bottom: var(--c-border);
 				border-bottom-width: 2px;
@@ -78,6 +79,10 @@ contactForm.style = scss`
 				height: 8rem;
 				resize: none;
 			}
+		}
+
+		[type='submit'] {
+			justify-self: start;
 		}
 	}
 `
