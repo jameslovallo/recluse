@@ -2,7 +2,10 @@ import fs from 'fs'
 import { compileString } from 'sass'
 
 const combine = (strings, ...values) => {
-	return strings.map((string, i) => string.trim() + (values[i] || '')).join('')
+	return strings
+		.map((string, i) => string + (values[i] || ''))
+		.join('')
+		.trim()
 }
 
 export const html = combine
