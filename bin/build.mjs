@@ -21,7 +21,9 @@ const marked = new Marked(
 ).use(gfmHeadingId())
 
 const writePage = async (filename) => {
-	const layout = await import('../../../src/layouts/default.js')
+	const layout = await import('../../../src/layouts/default.js').then(
+		(m) => m.default
+	)
 	import('../../../' + filename).then(({ meta, body }) => {
 		const page = layout({
 			meta,
