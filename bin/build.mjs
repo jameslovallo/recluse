@@ -6,7 +6,6 @@ import { gfmHeadingId } from 'marked-gfm-heading-id'
 import { markedHighlight } from 'marked-highlight'
 import path from 'path'
 import prism from 'prismjs'
-import layout from '../../../src/layouts/default.js'
 
 const marked = new Marked(
 	markedHighlight({
@@ -21,7 +20,8 @@ const marked = new Marked(
 	})
 ).use(gfmHeadingId())
 
-const writePage = (filename) => {
+const writePage = async (filename) => {
+	const layout = await import('../../../src/layouts/default.js')
 	import('../../../' + filename).then(({ meta, body }) => {
 		const page = layout({
 			meta,
