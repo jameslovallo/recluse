@@ -1,9 +1,15 @@
 import { html, loop, scss, when } from '../index.js'
 import { icon } from './icon.js'
 
-const iconLink = ({ icon: name, title, description, href }) => html`
+const iconLink = ({
+	icon: name,
+	title,
+	description,
+	href,
+	target = '_self',
+}) => html`
 	<li>
-		<a href="${href}">
+		<a href="${href}" target="${target}">
 			<span class="icon">
 				${name.startsWith('<') ? name : icon({ name })}
 			</span>
