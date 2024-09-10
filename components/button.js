@@ -8,6 +8,7 @@ export const button = ({
 	href,
 	target = '_self',
 	type, // i.e. submit
+	ariaLabel,
 }) => {
 	const classList = ['button', variant, shape, size].join(' ')
 	return href
@@ -18,7 +19,11 @@ export const button = ({
 				</a>
 		  `
 		: html`
-				<button class="${classList}" ${type ? `type="${type}"` : ''}>
+				<button
+					class="${classList}"
+					${type ? `type="${type}"` : ''}
+					${ariaLabel ? `aria-label="${ariaLabel}"` : ''}
+				>
 					<span class="hover-cover"></span>
 					${renderChildren(children)}
 				</button>

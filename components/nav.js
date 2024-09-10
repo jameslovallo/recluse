@@ -18,6 +18,7 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 						shape: 'circle',
 						size: 'lg',
 						variant: 'ghost',
+						ariaLabel: 'Open Menu',
 					}),
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
