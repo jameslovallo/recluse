@@ -11,6 +11,8 @@ export const button = ({
 	ariaLabel,
 }) => {
 	const classList = ['button', variant, shape, size].join(' ')
+	const typeAttr = type ? `type="${type}"` : ''
+	const ariaLabelAttr = ariaLabel ? `aria-label="${ariaLabel}"` : ''
 	return href
 		? html`
 				<a href="${href}" target="${target}" class="${classList}">
@@ -19,11 +21,7 @@ export const button = ({
 				</a>
 		  `
 		: html`
-				<button
-					class="${classList}"
-					${type ? `type="${type}"` : ''}
-					${ariaLabel ? `aria-label="${ariaLabel}"` : ''}
-				>
+				<button class="${classList}" ${typeAttr} ${ariaLabelAttr}>
 					<span class="hover-cover"></span>
 					${renderChildren(children)}
 				</button>
