@@ -2,7 +2,7 @@ import { md } from 'cuirk'
 import meta from '../src/data/meta.js'
 
 export const body = md`
-${meta.title}
+# ${meta.title}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet sit amet leo id suscipit. Proin augue velit, posuere eget iaculis non, feugiat accumsan mi. Phasellus accumsan magna a posuere fermentum. Nullam interdum rhoncus finibus. Integer aliquet sit amet justo imperdiet fermentum. Phasellus lobortis pharetra ipsum. Aenean id placerat mi. Donec blandit nibh quis turpis luctus, at facilisis erat vestibulum. Donec quis sodales nisi. Vestibulum ac nibh laoreet nunc rutrum ornare. Ut nisi mauris, tempor quis molestie vel, commodo non lectus. Donec eu neque venenatis, euismod nisi ac, sodales tortor.
 

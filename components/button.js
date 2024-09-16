@@ -9,8 +9,9 @@ export const button = ({
 	target = '_self',
 	type, // i.e. submit
 	ariaLabel,
+	classList: cList,
 }) => {
-	const classList = ['button', variant, shape, size].join(' ')
+	const classList = ['button', cList, variant, shape, size].join(' ')
 	const typeAttr = type ? `type="${type}"` : ''
 	const ariaLabelAttr = ariaLabel ? `aria-label="${ariaLabel}"` : ''
 	return href
@@ -80,11 +81,10 @@ button.style = scss`
 
 		&.ghost {
 			background: transparent;
-			border-color: transparent;
+			border: 0;
 			color: var(--c-primary);
 
 			&:hover {
-				border-color: var(--c-primary-3);
 				.hover-cover {
 					background: var(--c-primary);
 				}

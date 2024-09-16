@@ -42,7 +42,7 @@ export const componentStyles = (components) => `
 			--c-primary-hover: var(--c-primary-2);
 			--c-primary-active: var(--c-primary-3);
 			--c-primary-color: white;
-			--c-border: 1px solid #bbb;
+			--c-border: 1px solid #8888;
 			--c-surface: white;
 			--c-surface-color: black;
 			--c-surface-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;

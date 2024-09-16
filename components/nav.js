@@ -22,28 +22,27 @@ export const nav = ({ links, icon: navIcon = 'Menu' }) => {
 					}),
 					children: html`
 						<div style="display: grid; margin-bottom: 1rem;">
-							${loop([...mobileStart, ...mobileCenter, ...mobileEnd], textLink)}
+							${loop([...mobileStart, ...mobileCenter, ...mobileEnd], x => button({variant: 'ghost', children: x.title, ...x}))}
 						</div>
 					`,
 				})}
-				${loop(desktopStart, textLink)}
+				${loop(desktopStart, x => button({variant: 'ghost', children: x.title, ...x}))}
 			</div>
-			<div>${loop(desktopCenter, textLink)}</div>
-			<div>${loop(desktopEnd, textLink)}</div>
+			<div>${loop(desktopCenter, x => button({variant: 'ghost', children: x.title, ...x}))}</div>
+			<div>${loop(desktopEnd, x => button({variant: 'ghost', children: x.title, ...x}))}</div>
 		</nav>
 	`
 }
 
 nav.style = scss`
 	nav {
-		background: var(--nav, black);
-		color: var(--nav-color, white);
+		background: var(--nav, transparent);
+		color: var(--nav-color, currentColor);
 		display: grid;
 		font-size: 15px;
 		gap: 1rem;
 		grid-template-columns: repeat(3, auto);
-		height: 3rem;
-		padding: 0 .5rem;
+		padding: .5rem;
 
 		> div {
 			align-items: center;
@@ -72,21 +71,9 @@ nav.style = scss`
 				}
 			}
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
-			> a {
-				padding: 1rem .5rem;
-
-				&:hover {
-					background: var(--c-primary-hover);
-				}
-
-				&:active {
-					background: var(--c-primary-active);
-				}
+			> .button {
+				border-radius: 0.5rem;
+				padding: .5rem;
 
 				@media (max-width: 767px) {
 					&:not(.show-on-mobile) {
