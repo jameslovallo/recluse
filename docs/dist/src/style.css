@@ -26,8 +26,6 @@ h2 {
 
 h3:has(code) {
 	border-bottom: 1px solid #8888;
-	font-weight: normal;
-	font-size: 18px;
 	margin-top: 2rem;
 	padding-bottom: 0.5rem;
 }

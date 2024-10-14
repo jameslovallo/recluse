@@ -17,14 +17,14 @@ import { button } from "../../src/components/index.js";
 
 button({
 	children,
-	variant = 'filled', // filled, outlined, subtle, ghost
-	size = 'md', // sm, md, lg
-	shape = 'squared', // squared, rounded, pill, square, circle
+	variant = 'filled',
+	size = 'md',
+	shape = 'squared',
 	href,
 	target = '_self',
-	type, // i.e. submit
+	type,
 	ariaLabel,
-	classList: cList,
+	classList,
 })
 \`\`\`
 
