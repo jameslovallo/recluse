@@ -59,3 +59,10 @@ pre:has([class*="language-"]) {
 	overflow: auto;
 	border-radius: 0.3em;
 }
+
+nav .button {
+	--c-primary: #ddd;
+	--c-primary-1: #ddd1;
+	--c-primary-2: #ddd2;
+	--c-primary-3: #ddd3;
+}
