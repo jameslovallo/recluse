@@ -1,4 +1,6 @@
 export {
+	accordion,
+	badge,
 	button,
 	card,
 	cardActions,
@@ -8,8 +10,8 @@ export {
 	modal,
 	nav,
 	youtube,
-} from '../../../components/index.js'
-export { contactForm } from './contact-form.js'
-export { footer } from './footer.js'
-export { grid } from './grid.js'
-export { pageMeta } from './page-meta.js'
+} from "../../../components/index.js";
+export { contactForm } from "./contact-form.js";
+export { footer } from "./footer.js";
+export { grid } from "./grid.js";
+export { pageMeta } from "./page-meta.js";

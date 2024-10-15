@@ -1,5 +1,5 @@
 export default {
-	title: "New Cuirk Project",
+	title: "Cuirk",
 	description: "Just the basics to get you started",
 	url: "",
 	image: "/src/images/global/meta.jpeg",
