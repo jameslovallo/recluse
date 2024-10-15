@@ -13,7 +13,7 @@ ${button({ children: "Button" })}
 ## Usage
 
 \`\`\`js
-import { button } from "../../src/components/index.js";
+import { button } from "cuirk/components/index.js";
 
 button({
 	children,
@@ -53,23 +53,23 @@ ${button({ children: "button", variant: "ghost" })}
 
 squared
 
-${button({ children: "button", variant: "squared" })}
+${button({ children: "button", shape: "squared" })}
 
 rounded
 
-${button({ children: "button", variant: "rounded" })}
+${button({ children: "button", shape: "rounded" })}
 
 pill
 
-${button({ children: "button", variant: "pill" })}
+${button({ children: "button", shape: "pill" })}
 
 square
 
-${button({ children: icon({ name: "Star" }), variant: "square" })}
+${button({ children: icon({ name: "Star" }), shape: "square" })}
 
 circle
 
-${button({ children: icon({ name: "Star" }), variant: "circle" })}
+${button({ children: icon({ name: "Star" }), shape: "circle" })}
 
 ### \`size\`
 
@@ -84,4 +84,39 @@ ${button({ children: "button", size: "md" })}
 large
 
 ${button({ children: "button", size: "lg" })}
+
+### \`href\`
+
+When a href is provided, the button will be rendered as an \`<a>\` element.
+
+### \`target\`
+
+\`_self\` by default if href is provided, or \`_blank\`.
+
+### \`type\`
+
+The button type, i.e. \`submit\`, or \`reset\`.
+
+### \`ariaLabel\`
+
+The aria label for the button.
+
+### \`classList\`
+
+The class list for the button.
+
+## With Icons
+
+To add an icon, simply include an icon component as a child.
+
+${button({ children: icon({ name: "Star" }) + "Button", shape: "pill" })}
+${button({ children: "Button" + icon({ name: "Star" }), shape: "pill" })}
+${button({ children: icon({ name: "Star" }), shape: "circle" })}
+<br><br>
+
+\`\`\`js
+button({ children: icon({ name: "Star" }) + "Button", shape: "pill" })
+button({ children: "Button" + icon({ name: "Star" }), shape: "pill" })
+button({ children: icon({ name: "Star" }), shape: "circle" })
+\`\`\`
 `;
