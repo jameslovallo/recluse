@@ -9,7 +9,6 @@
 		"cuirk": "bin.js"
 	},
 	"scripts": {
-		"dev": "npx vite",
 		"update": "npm version patch && npm publish && git push"
 	},
 	"author": "James Lovallo",
