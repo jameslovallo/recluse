@@ -2,11 +2,11 @@ import { md } from "cuirk";
 import { button, icon } from "../../src/components/index.js";
 
 export const meta = {
-	title: "Button",
+  title: "Button",
 };
 
 export const body = md`
-# Button 
+# Button
 
 ${button({ children: "Button" })}
 
