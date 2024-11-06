@@ -1,5 +1,5 @@
 import { md } from 'cuirk'
-import meta from '../src/data/meta.js'
+import meta from '../data/meta.js'
 
 export const body = md`
 # ${meta.title}
