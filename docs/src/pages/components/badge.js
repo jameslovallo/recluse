@@ -1,5 +1,5 @@
 import { md } from "cuirk";
-import { badge, button, card, cardBody } from "../../src/components/index.js";
+import { badge, button, card, cardBody } from "../../components/index.js";
 
 export const meta = {
 	title: "Badge",

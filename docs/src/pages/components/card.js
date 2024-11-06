@@ -1,29 +1,24 @@
 import { md, html } from "cuirk";
-import {
-  button,
-  card,
-  cardBody,
-  cardActions,
-} from "../../src/components/index.js";
+import { button, card, cardBody, cardActions } from "../../components/index.js";
 
 export const meta = {
-  title: "Button",
+	title: "Button",
 };
 
 export const body = md`
 # Card
 
 ${card({
-  children: [
-    html`<img src="//picsum.photos/seed/1/400/200" />`,
-    cardBody({ title: "title", subtitle: "subtitle", copy: "copy" }),
-    cardActions({
-      children: [
-        button({ children: "test", variant: "ghost", size: "sm" }),
-        button({ children: "test", variant: "ghost", size: "sm" }),
-      ],
-    }),
-  ],
+	children: [
+		html`<img src="//picsum.photos/seed/1/400/200" />`,
+		cardBody({ title: "title", subtitle: "subtitle", copy: "copy" }),
+		cardActions({
+			children: [
+				button({ children: "test", variant: "ghost", size: "sm" }),
+				button({ children: "test", variant: "ghost", size: "sm" }),
+			],
+		}),
+	],
 })}
 
 ## Usage

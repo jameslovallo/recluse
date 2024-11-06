@@ -1,5 +1,5 @@
 import { md } from "cuirk";
-import { accordion } from "../../../components/index.js";
+import { accordion } from "../../components/index.js";
 
 export const meta = {
 	title: "Accordion",
