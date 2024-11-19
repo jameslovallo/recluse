@@ -1,0 +1,21 @@
+:root {
+	--c-primary: #0079ee;
+	--nav: transparent;
+	--nav-color: black;
+	font-family: sans-serif;
+}
+
+:root,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	max-width: 70ch;
+	margin: 0 auto 3rem;
+	padding: 1rem;
+}
