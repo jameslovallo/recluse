@@ -12,6 +12,7 @@ export {
 } from "cuirk/components/index.js";
 // dev
 export { accordion } from "../../../../dev/accordion.js";
+export { avatar } from "../../../../dev/avatar.js";
 export { contactForm } from "./contact-form.js";
 export { footer } from "./footer.js";
 export { grid } from "./grid.js";

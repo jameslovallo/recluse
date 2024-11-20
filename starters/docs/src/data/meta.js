@@ -14,6 +14,10 @@ export default {
 		},
 		{
 			rel: "stylesheet",
+			href: "/src/prism.css",
+		},
+		{
+			rel: "stylesheet",
 			href: "/src/utils.css",
 		},
 	],
