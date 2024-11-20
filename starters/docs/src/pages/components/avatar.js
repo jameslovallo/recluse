@@ -8,8 +8,6 @@ export const meta = {
 export const body = md`
 # Avatar
 
-<div class="c-row">
-
 ${avatar({
 	children: "A",
 	size: "medium",
@@ -24,8 +22,6 @@ ${avatar({
 	color: "dark",
 	shape: "circle",
 })}
-
-</div>
 
 ## Usage
 

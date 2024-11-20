@@ -32,6 +32,7 @@
 	aspect-ratio: 1;
 	display: inline-flex;
 	justify-content: center;
+	vertical-align: middle;
 }
 .c-circle {
 	border-radius: 50%;
