@@ -1,7 +1,7 @@
 import { html, loop, renderChildren, scss } from "../index.js";
 import { icon } from "../components/icon.js";
 
-const accordionItem = ({ title, children }) => html`
+const accordionItem = ({ children, title }) => html`
 	<details class="c-accordion c-surface c-border">
 		<summary class="c-row c-action">
 			${title} ${icon({ name: "ChevronDown" })}

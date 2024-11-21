@@ -8,10 +8,10 @@ const classList = (props) =>
 
 export const avatar = ({
 	children,
+	color = "primary",
 	image,
 	shape = "circle",
 	size = "medium",
-	color = "primary",
 }) => html`
 	<div class="c-avatar c-stack ${classList([shape, size, color])}">
 		${when(image, html`<img src="${image}" class="c-circle" />`)}
