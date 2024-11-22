@@ -119,3 +119,10 @@ export const embedCode = (file) =>
 		fs.readFileSync(file, "utf-8").replaceAll("\t", "  "),
 		"```",
 	].join("\n");
+
+
+export const classList = (props) =>
+  props
+    .map((prop) => `c-${prop.replaceAll(' ', ' c-')}`)
+    .join(" ")
+    .trim();

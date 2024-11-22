@@ -1,7 +1,6 @@
-import { createTags, html } from 'cuirk'
-import globalMeta from '../data/meta.js'
+import { createTags, html } from '../index.js'
 
-export const pageMeta = (meta) => {
+export const pageMeta = (globalMeta, meta) => {
 	const { title, description, url, image } = {
 		...globalMeta,
 		...meta,

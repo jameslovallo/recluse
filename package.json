@@ -9,7 +9,7 @@
 		"cuirk": "bin.js"
 	},
 	"scripts": {
-		"dev": "cd docs && npm i && npm run dev",
+		"dev": "cd starters/docs && npm i && npm run dev",
 		"update": "npm version patch && npm publish && git push"
 	},
 	"author": "James Lovallo",

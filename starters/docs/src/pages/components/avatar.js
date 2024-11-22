@@ -10,17 +10,16 @@ export const body = md`
 
 ${avatar({
 	children: "A",
-	size: "medium",
 	color: "primary",
 	shape: "rounded square",
+	size: "medium",
 })}
 
 ${avatar({
 	children: "A",
 	image: "//picsum.photos/id/184/64/64",
-	size: "medium",
-	color: "dark",
 	shape: "circle",
+	size: "medium",
 })}
 
 ## Usage
@@ -30,17 +29,16 @@ import { avatar } from "cuirk/components/index.js";
 
 \${avatar({
 	children: "A",
-	size: "medium",
 	color: "primary",
 	shape: "rounded square",
+	size: "medium",
 })}
 
 \${avatar({
 	children: "A",
 	image: "//picsum.photos/id/184/64/64",
-	size: "medium",
-	color: "dark",
 	shape: "circle",
+	size: "medium",
 })}
 \`\`\`
 `;

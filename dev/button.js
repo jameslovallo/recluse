@@ -1,15 +1,15 @@
-import { html, classList, renderChildren } from "../index.js";
+import { html, classList, renderChildren, scss } from "../index.js";
 
 export const button = ({
 	children,
 	color = "primary",
 	href,
 	shape = "pill",
-	size,
+	size = "medium",
 	target = "_self",
-	variant,
+	variant = "solid",
 }) => {
-	const classes = classList([color, shape, size, target, variant]);
+	const classes = classList([color, shape, size, variant]);
 	return href
 		? html`
 				<a class="c-button c-action ${classes}" href=${href} target=${target}>
@@ -34,9 +34,11 @@ button.style = scss`
 		display: inline-flex;
 		height: 1.5rem;
 		justify-content: center;
+		line-height: 1;
 		overflow: hidden;
 		padding: 0 0.5rem;
 		position: relative;
+		text-decoration: none;
 		&.c-outline,
 		&.c-text {
 			background: transparent;

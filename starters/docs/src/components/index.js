@@ -1,6 +1,5 @@
 // pre-beta
 export {
-	button,
 	card,
 	cardActions,
 	cardBody,
@@ -13,7 +12,8 @@ export {
 // dev
 export { accordion } from "../../../../dev/accordion.js";
 export { avatar } from "../../../../dev/avatar.js";
+export { button } from "../../../../dev/button.js";
 export { contactForm } from "./contact-form.js";
 export { footer } from "./footer.js";
 export { grid } from "./grid.js";
-export { pageMeta } from "./page-meta.js";
+export { pageMeta } from "../../../../dev/page-meta.js";
