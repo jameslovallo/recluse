@@ -9,10 +9,22 @@ export const body = md`
 # Button
 
 ${button({
-  children: "A",
+  children: "Button",
   color: "primary",
-  shape: "rounded square",
-  size: "medium",
+  shape: "rounded",
+  size: "large",
+})}
+
+${button({
+  children: "Button",
+  color: "secondary",
+  shape: "pill",
+})}
+
+${button({
+  children: "A",
+  color: "tertiary",
+  shape: "circle",
 })}
 
 ## Usage

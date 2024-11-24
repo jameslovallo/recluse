@@ -4,7 +4,7 @@ export const button = ({
 	children,
 	color = "primary",
 	href,
-	shape = "pill",
+	shape = "rounded",
 	size = "medium",
 	target = "_self",
 	variant = "solid",
@@ -36,7 +36,7 @@ button.style = scss`
 		justify-content: center;
 		line-height: 1;
 		overflow: hidden;
-		padding: 0 0.5rem;
+		padding: 0 0.75rem;
 		position: relative;
 		text-decoration: none;
 		&.c-outline,
@@ -46,6 +46,9 @@ button.style = scss`
 		}
 		&.c-outline {
 			box-shadow: inset 0 0 0 1px currentcolor;
+		}
+		&.c-large {
+			height: 2rem;
 		}
 	}
 `;
