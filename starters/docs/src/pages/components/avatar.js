@@ -1,25 +1,25 @@
 import { md } from "cuirk";
-import { avatar } from "../../../../../dev/avatar.js";
+import { avatar } from "../../components/index.js";
 
 export const meta = {
-	title: "Avatar",
+  title: "Avatar",
 };
 
 export const body = md`
 # Avatar
 
 ${avatar({
-	children: "A",
-	color: "primary",
-	shape: "rounded square",
-	size: "medium",
+  children: "A",
+  color: "primary",
+  shape: "rounded square",
+  size: "medium",
 })}
 
 ${avatar({
-	children: "A",
-	image: "//picsum.photos/id/184/64/64",
-	shape: "circle",
-	size: "medium",
+  children: "A",
+  image: "//picsum.photos/id/184/64/64",
+  shape: "circle",
+  size: "medium",
 })}
 
 ## Usage

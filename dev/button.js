@@ -1,26 +1,26 @@
 import { html, classList, renderChildren, scss } from "../index.js";
 
 export const button = ({
-	children,
-	color = "primary",
-	href,
-	shape = "rounded",
-	size = "medium",
-	target = "_self",
-	variant = "solid",
+  children,
+  color = "primary",
+  href,
+  shape = "rounded",
+  size = "medium",
+  target = "_self",
+  variant = "solid",
 }) => {
-	const classes = classList([color, shape, size, variant]);
-	return href
-		? html`
-				<a class="c-button c-action ${classes}" href=${href} target=${target}>
-					${renderChildren(children)}
-				</a>
-		  `
-		: html`
-				<button class="c-button c-action ${classes}">
-					${renderChildren(children)}
-				</button>
-		  `;
+  const classes = classList([color, shape, size, variant]);
+  return href
+    ? html`
+        <a class="c-button c-action ${classes}" href=${href} target=${target}>
+          ${renderChildren(children)}
+        </a>
+      `
+    : html`
+        <button class="c-button c-action ${classes}">
+          ${renderChildren(children)}
+        </button>
+      `;
 };
 
 button.style = scss`
@@ -36,7 +36,7 @@ button.style = scss`
 		justify-content: center;
 		line-height: 1;
 		overflow: hidden;
-		padding: 0 0.75rem;
+		padding: 0 0.5rem;
 		position: relative;
 		text-decoration: none;
 		&.c-outline,

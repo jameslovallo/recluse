@@ -1,17 +1,17 @@
 import { md } from "cuirk";
-import { accordion } from "../../../../../dev/accordion.js";
+import { accordion } from "../../components/index.js";
 
 export const meta = {
-	title: "Accordion",
+  title: "Accordion",
 };
 
 export const body = md`
 # Accordion
 
 ${accordion([
-	{ title: "Accordion item 1", children: "Accordion item 1 content" },
-	{ title: "Accordion item 2", children: "Accordion item 2 content" },
-	{ title: "Accordion item 3", children: "Accordion item 3 content" },
+  { title: "Accordion item 1", children: "Accordion item 1 content" },
+  { title: "Accordion item 2", children: "Accordion item 2 content" },
+  { title: "Accordion item 3", children: "Accordion item 3 content" },
 ])}
 
 ## Usage

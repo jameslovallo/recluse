@@ -1,5 +1,5 @@
 import { md } from "cuirk";
-import { button } from "../../../../../dev/button.js";
+import { button } from "../../components/index.js";
 
 export const meta = {
   title: "Button",

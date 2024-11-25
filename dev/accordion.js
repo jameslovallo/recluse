@@ -2,12 +2,12 @@ import { html, loop, renderChildren, scss } from "../index.js";
 import { icon } from "../components/icon.js";
 
 const accordionItem = ({ children, title }) => html`
-	<details class="c-accordion c-surface c-border">
-		<summary class="c-row c-action">
-			${title} ${icon({ name: "ChevronDown" })}
-		</summary>
-		<div>${renderChildren(children)}</div>
-	</details>
+  <details class="c-accordion c-surface c-border">
+    <summary class="c-row c-action">
+      ${title} ${icon({ name: "ChevronDown" })}
+    </summary>
+    <div>${renderChildren(children)}</div>
+  </details>
 `;
 
 export const accordion = (items) => loop(items, accordionItem);
@@ -18,7 +18,7 @@ accordion.style = scss`
       align-items: center;
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+      padding: 0.75rem 0.75rem 0.75rem 1rem;
       &::marker,
       &::-webkit-details-marker {
         content: "";
@@ -34,7 +34,7 @@ accordion.style = scss`
       }
     }
     > div {
-      padding: 0.75rem;
+      padding: 1rem;
     }
     + .c-accordion {
       border-top: 0;

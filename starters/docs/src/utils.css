@@ -14,18 +14,12 @@
 	--c-on-error: white;
 	--c-warning: #ffd600;
 	--c-on-warning: black;
+	--c-surface: #8881;
 }
 * {
 	box-sizing: border-box;
 }
-.shape > * {
-	background: var(--c-neutral);
-	width: 2rem;
-}
-.surface .c-surface {
-	height: 2rem;
-	margin-bottom: 1rem;
-}
+
 .c-square,
 .c-circle {
 	align-items: center;
