@@ -26,6 +26,7 @@ ${button({
   children: "A",
   color: "success",
   shape: "circle",
+  variant: "outline",
 })}
 
 ## Usage
