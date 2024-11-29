@@ -19,11 +19,12 @@ ${button({
   children: "Button",
   color: "secondary",
   shape: "pill",
+  variant: "text",
 })}
 
 ${button({
   children: "A",
-  color: "tertiary",
+  color: "success",
   shape: "circle",
 })}
 
