@@ -240,6 +240,6 @@ export const embedCode = (file) =>
 
 export const classList = (props) =>
   props
-    .map((prop) => `c-${prop.replaceAll(" ", " c-")}`)
+    .map((prop) => `r-${prop.replaceAll(" ", " c-")}`)
     .join(" ")
     .trim();

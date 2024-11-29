@@ -1,4 +1,4 @@
-import { html, loop, scss } from "../index.js";
+import { html, loop, scss } from "recluse";
 import { button, icon, modal } from "./index.js";
 
 export const nav = ({ links, icon: navIcon = "Menu" }) => {
@@ -16,30 +16,30 @@ export const nav = ({ links, icon: navIcon = "Menu" }) => {
           trigger: button({
             children: icon({ name: navIcon }),
             shape: "circle",
-            size: "lg",
-            variant: "ghost",
+            size: "large",
+            variant: "text",
             ariaLabel: "Open Menu",
           }),
           children: html`
             <div style="display: grid; margin-bottom: 1rem;">
               ${loop([...mobileStart, ...mobileCenter, ...mobileEnd], (x) =>
-                button({ variant: "ghost", children: x.title, ...x })
+                button({ variant: "text", children: x.title, ...x })
               )}
             </div>
           `,
         })}
         ${loop(desktopStart, (x) =>
-          button({ variant: "ghost", children: x.title, ...x })
+          button({ variant: "text", children: x.title, ...x })
         )}
       </div>
       <div>
         ${loop(desktopCenter, (x) =>
-          button({ variant: "ghost", children: x.title, ...x })
+          button({ variant: "text", children: x.title, ...x })
         )}
       </div>
       <div>
         ${loop(desktopEnd, (x) =>
-          button({ variant: "ghost", children: x.title, ...x })
+          button({ variant: "text", children: x.title, ...x })
         )}
       </div>
     </nav>

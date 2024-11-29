@@ -5,8 +5,6 @@ import navLinks from "../data/nav.js";
 
 const { footer, pageMeta, nav } = components;
 
-console.log(Object.keys(components));
-
 export default ({ meta, children }) => {
   return html`
     <!DOCTYPE html>
