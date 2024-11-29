@@ -1,5 +1,5 @@
 import { html, loop, scss } from "../index.js";
-import { button, icon, modal, textLink } from "./index.js";
+import { button, icon, modal } from "./index.js";
 
 export const nav = ({ links, icon: navIcon = "Menu" }) => {
   const desktopStart = links.filter(({ desktop }) => desktop === "start");

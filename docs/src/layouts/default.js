@@ -18,7 +18,6 @@ export default ({ meta, children }) => {
       <body>
         ${nav({ links: navLinks })}
         <main>${children}</main>
-        ${footer({ links: navLinks })}
         <!-- component scripts -->
         ${componentScripts(components)}
       </body>
