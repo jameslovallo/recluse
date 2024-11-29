@@ -73,10 +73,6 @@ nav.style = scss`
 					display: none;
 				}
 
-				.trigger .r-button {
-					--c-primary: var(--nav-color, white);
-				}
-
 				a {
 					font-size: 1.5rem;
 					padding: .5rem 0;
