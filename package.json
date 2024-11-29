@@ -9,8 +9,8 @@
 		"recluse": "bin.js"
 	},
 	"scripts": {
-		"dev": "cd starters/docs && npm i && npm run dev",
-		"update": "npm version patch && npm publish && git push"
+		"dev": "cd docs && npm i && npm run dev",
+		"update": "npm version patch && npm publish && cd docs/ && npm upgrade && npm run dev"
 	},
 	"author": "James Lovallo",
 	"license": "ISC",

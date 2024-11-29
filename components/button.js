@@ -44,7 +44,7 @@ button.style = scss`
 		&.r-text {
 			background: transparent;
 			color: var(--r-primary);
-			padding: 0.05rem;
+			padding: 0 0.5rem;
 		}
 		&.r-outline {
 			box-shadow: inset 0 0 0 1px currentcolor;

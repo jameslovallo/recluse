@@ -84,9 +84,6 @@ nav.style = scss`
 			}
 
 			> .r-button {
-				border-radius: 0.5rem;
-				padding: .5rem;
-
 				@media (max-width: 767px) {
 					&:not(.show-on-mobile) {
 						display: none;
