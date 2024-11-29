@@ -132,6 +132,16 @@ export const componentStyles = (components) => html`
     	color: var(--r-secondary);
     }
 
+    .r-tertiary {
+    	background: var(--r-tertiary);
+    	color: var(--r-on-tertiary);
+    }
+
+    .r-tertiary.invert {
+    	background: var(--r-on-tertiary);
+    	color: var(--r-tertiary);
+    }
+
     .r-success {
     	background: var(--r-success);
     	color: var(--r-on-success);

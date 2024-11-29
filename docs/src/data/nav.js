@@ -7,12 +7,6 @@ export default [
     classList: ["show-on-mobile"],
   },
   {
-    title: "About",
-    href: "/about",
-    mobile: "end",
-    desktop: "end",
-  },
-  {
     title: "Components",
     href: "/components",
     desktop: "end",
