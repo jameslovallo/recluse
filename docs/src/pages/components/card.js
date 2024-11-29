@@ -1,4 +1,4 @@
-import { md, html } from "cuirk";
+import { md, html } from "recluse";
 import { button, card } from "../../components/index.js";
 
 export const meta = {
@@ -22,7 +22,7 @@ ${card({
 ## Usage
 
 \`\`\`js
-import { avatar } from "cuirk/components/index.js";
+import { avatar } from "recluse/components/index.js";
 
 \${avatar({
 	children: "A",

@@ -1,62 +1,29 @@
-import { html, renderChildren, scss, when } from '../index.js'
+import { html, renderChildren, scss, classList } from "../index.js";
 
-export const card = ({ children }) =>
-	html`<div class="card surface">${renderChildren(children)}</div>`
-
-export const cardBody = ({ title, subtitle, copy, children }) =>
-	html`
-		<div class="body">
-			${when(title, html`<h3>${title}</h3>`)}
-			${when(subtitle, html`<h4>${subtitle}</h4>`)}
-			${when(copy, html`<p>${copy}</p>`)}
-			${when(children, renderChildren(children))}
-		</div>
-	`
-
-export const cardActions = ({ children }) =>
-	html`<div class="actions">${renderChildren(children)}</div>`
+export const card = ({
+  children,
+  color = "surface",
+  shape = "rounded",
+}) => html`
+  <div class="r-card r-surface r-border ${classList([shape, color])}">
+    ${renderChildren(children)}
+  </div>
+`;
 
 card.style = scss`
-	.card {
-		> img {
-			width: 100%;
-		}
-
-		> .body {
-			padding: 1rem;
-
-			> * {
-				margin: 0;
-			}
-
-			> h3 {
-				margin-bottom: 1em;
-			}
-
-			> h4 {
-				font-weight: normal;
-				margin-bottom: 0.5em;
-			}
-
-			> p {
-				font-size: 14px;
-				opacity: 0.8;
-			}
-		}
-
-		> .actions {
-			align-items: center;
-			display: flex;
-			gap: 0.5rem;
-			padding: 1rem;
-
-			&:has(.ghost:first-child)	{
-				padding: 0.25rem;
-
-				&:has(.sm) {
-					padding: 0.5rem 0.5rem;
-				}
-			}
-		}
-	}
-`
+  .r-card {
+    > h1, > h2, > h3, > h4, > h5, > h6, > p, > ol, > ul {
+      line-height: 1;
+      margin: 1rem,
+    }
+    > .r-button.r-text {
+      margin: .25rem 0;
+      &:first-of-type {
+        margin-inline-start: 0.25rem;
+      }
+      &:last-of-type {
+        margin-inline-end: 0.25rem;
+      }
+    }
+  }
+`;

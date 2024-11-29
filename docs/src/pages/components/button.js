@@ -1,4 +1,4 @@
-import { md } from "cuirk";
+import { md } from "recluse";
 import { button } from "../../components/index.js";
 
 export const meta = {
@@ -30,13 +30,25 @@ ${button({
 ## Usage
 
 \`\`\`js
-import { button } from "cuirk/buttons/index.js";
+import { button } from "recluse/buttons/index.js";
 
 \${button({
-	children: "A",
-	color: "primary",
-	shape: "rounded square",
-	size: "medium",
+  children: "Button",
+  color: "primary",
+  shape: "rounded",
+  size: "large",
+})}
+
+\${button({
+  children: "Button",
+  color: "secondary",
+  shape: "pill",
+})}
+
+\${button({
+  children: "A",
+  color: "tertiary",
+  shape: "circle",
 })}
 \`\`\`
 `;

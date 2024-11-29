@@ -1,4 +1,4 @@
-import { md } from "cuirk";
+import { md } from "recluse";
 import { accordion } from "../../components/index.js";
 
 export const meta = {
@@ -17,7 +17,7 @@ ${accordion([
 ## Usage
 
 \`\`\`js
-import { accordion } from "cuirk/components/index.js";
+import { accordion } from "recluse/components/index.js";
 
 \${accordion([
 	{ title: "Accordion item 1", children: "Accordion item 1 content" },

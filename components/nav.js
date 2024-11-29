@@ -1,41 +1,53 @@
-import { html, loop, scss } from '../index.js'
-import { button, icon, modal, textLink } from './index.js'
+import { html, loop, scss } from "../index.js";
+import { button, icon, modal, textLink } from "./index.js";
 
-export const nav = ({ links, icon: navIcon = 'Menu' }) => {
-	const desktopStart = links.filter(({ desktop }) => desktop === 'start')
-	const desktopCenter = links.filter(({ desktop }) => desktop === 'center')
-	const desktopEnd = links.filter(({ desktop }) => desktop === 'end')
-	const mobileStart = links.filter(({ mobile }) => mobile === 'start')
-	const mobileCenter = links.filter(({ mobile }) => mobile === 'center')
-	const mobileEnd = links.filter(({ mobile }) => mobile === 'end')
-	return html`
-		<nav>
-			<div>
-				${modal({
-					id: 'nav',
-					trigger: button({
-						children: icon({ name: navIcon }),
-						shape: 'circle',
-						size: 'lg',
-						variant: 'ghost',
-						ariaLabel: 'Open Menu',
-					}),
-					children: html`
-						<div style="display: grid; margin-bottom: 1rem;">
-							${loop([...mobileStart, ...mobileCenter, ...mobileEnd], x => button({variant: 'ghost', children: x.title, ...x}))}
-						</div>
-					`,
-				})}
-				${loop(desktopStart, x => button({variant: 'ghost', children: x.title, ...x}))}
-			</div>
-			<div>${loop(desktopCenter, x => button({variant: 'ghost', children: x.title, ...x}))}</div>
-			<div>${loop(desktopEnd, x => button({variant: 'ghost', children: x.title, ...x}))}</div>
-		</nav>
-	`
-}
+export const nav = ({ links, icon: navIcon = "Menu" }) => {
+  const desktopStart = links.filter(({ desktop }) => desktop === "start");
+  const desktopCenter = links.filter(({ desktop }) => desktop === "center");
+  const desktopEnd = links.filter(({ desktop }) => desktop === "end");
+  const mobileStart = links.filter(({ mobile }) => mobile === "start");
+  const mobileCenter = links.filter(({ mobile }) => mobile === "center");
+  const mobileEnd = links.filter(({ mobile }) => mobile === "end");
+  return html`
+    <nav class="r-nav">
+      <div>
+        ${modal({
+          id: "nav",
+          trigger: button({
+            children: icon({ name: navIcon }),
+            shape: "circle",
+            size: "lg",
+            variant: "ghost",
+            ariaLabel: "Open Menu",
+          }),
+          children: html`
+            <div style="display: grid; margin-bottom: 1rem;">
+              ${loop([...mobileStart, ...mobileCenter, ...mobileEnd], (x) =>
+                button({ variant: "ghost", children: x.title, ...x })
+              )}
+            </div>
+          `,
+        })}
+        ${loop(desktopStart, (x) =>
+          button({ variant: "ghost", children: x.title, ...x })
+        )}
+      </div>
+      <div>
+        ${loop(desktopCenter, (x) =>
+          button({ variant: "ghost", children: x.title, ...x })
+        )}
+      </div>
+      <div>
+        ${loop(desktopEnd, (x) =>
+          button({ variant: "ghost", children: x.title, ...x })
+        )}
+      </div>
+    </nav>
+  `;
+};
 
 nav.style = scss`
-	nav {
+	.r-nav {
 		background: var(--nav, transparent);
 		color: var(--nav-color, currentColor);
 		display: grid;
@@ -56,12 +68,12 @@ nav.style = scss`
 				justify-content: end;
 			}
 
-			.modal {
+			.r-modal {
 				@media (min-width: 768px) {
 					display: none;
 				}
 
-				.trigger .button {
+				.trigger .r-button {
 					--c-primary: var(--nav-color, white);
 				}
 
@@ -71,7 +83,7 @@ nav.style = scss`
 				}
 			}
 
-			> .button {
+			> .r-button {
 				border-radius: 0.5rem;
 				padding: .5rem;
 
@@ -83,4 +95,4 @@ nav.style = scss`
 			}
 		}
 	}
-`
+`;

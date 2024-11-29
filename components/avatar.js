@@ -7,33 +7,33 @@ export const avatar = ({
   shape = "circle",
   size = "medium",
 }) => html`
-  <div class="c-avatar c-stack ${classList([shape, size, color])}">
-    ${when(image, html`<img src="${image}" class="c-circle" />`)}
+  <div class="r-avatar r-stack ${classList([shape, size, color])}">
+    ${when(image, html`<img src="${image}" class="r-circle" />`)}
     ${when(
       children,
-      html`<span class="c-center">${renderChildren(children)}</span>`
+      html`<span class="r-center">${renderChildren(children)}</span>`
     )}
   </div>
 `;
 
 avatar.style = scss`
-  .c-avatar {
+  .r-avatar {
     &:has(img) {
       background: transparent;
     }
-    &.c-small {
+    &.r-small {
       width: 2rem;
       span {
         font-size: 1rem;
       }
     }
-    &.c-medium {
+    &.r-medium {
       width: 3rem;
       span {
         font-size: 1.5rem;
       }
     }
-    &.c-large {
+    &.r-large {
       width: 4rem;
       span {
         font-size: 2rem;

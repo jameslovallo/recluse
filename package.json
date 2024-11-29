@@ -1,12 +1,12 @@
 {
-	"name": "cuirk",
+	"name": "recluse",
 	"type": "module",
 	"version": "0.1.0",
-	"description": "The static site generator for Cuick.js",
+	"description": "A mindful rejection of the popular way of doing things.",
 	"main": "index.js",
 	"module": "index.js",
 	"bin": {
-		"cuirk": "bin.js"
+		"recluse": "bin.js"
 	},
 	"scripts": {
 		"dev": "cd starters/docs && npm i && npm run dev",

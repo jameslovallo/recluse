@@ -1,33 +1,33 @@
-import { html, renderChildren, scss } from '../index.js'
-import { button } from './button.js'
+import { html, renderChildren, scss } from "../index.js";
+import { button } from "./button.js";
 
 export const modal = ({ trigger, close, children }) => html`
-	<div class="modal">
-		<div class="trigger">
-			${trigger ? trigger : button({ children: 'Open', shape: 'pill' })}
-		</div>
-		<dialog>
-			<div class="content">
-				<div class="scroll">${renderChildren(children)}</div>
-				<form method="dialog">
-					${close ? close : button({ children: 'Close', shape: 'pill' })}
-				</form>
-			</div>
-		</dialog>
-	</div>
-`
+  <div class="r-modal">
+    <div class="trigger">
+      ${trigger ? trigger : button({ children: "Open", shape: "pill" })}
+    </div>
+    <dialog>
+      <div class="content">
+        <div class="scroll">${renderChildren(children)}</div>
+        <form method="dialog">
+          ${close ? close : button({ children: "Close", shape: "pill" })}
+        </form>
+      </div>
+    </dialog>
+  </div>
+`;
 
 modal.init = () => {
-	const modals = document.querySelectorAll('.modal')
-	modals.forEach((modal) => {
-		const trigger = modal.querySelector('.trigger > *')
-		const dialog = modal.querySelector('dialog')
-		trigger.addEventListener('click', () => dialog.showModal())
-	})
-}
+  const modals = document.querySelectorAll(".r-modal");
+  modals.forEach((modal) => {
+    const trigger = modal.querySelector(".trigger > *");
+    const dialog = modal.querySelector("dialog");
+    trigger.addEventListener("click", () => dialog.showModal());
+  });
+};
 
 modal.style = scss`
-	.modal {
+	.r-modal {
 		dialog[open] {
 			align-items: center;
 			border: none;
@@ -59,4 +59,4 @@ modal.style = scss`
 	body:has(dialog[open]) {
 		overflow: hidden;
 	}
-`
+`;

@@ -1,10 +1,9 @@
-export { accordion } from './accordion.js'
-export { badge } from './badge.js'
-export { button } from './button.js'
-export { card, cardActions, cardBody } from './card.js'
-export { icon } from './icon.js'
-export { linkList } from './link-list.js'
-export { modal } from './modal.js'
-export { nav } from './nav.js'
-export { textLink } from './text-link.js'
-export { youtube } from './youtube.js'
+export { accordion } from "./accordion.js";
+export { avatar } from "./avatar.js";
+export { button } from "./button.js";
+export { card } from "./card.js";
+export { icon } from "./icon.js";
+export { modal } from "./modal.js";
+export { nav } from "./nav.js";
+export { pageMeta } from "./page-meta.js";
+export { youtube } from "./youtube.js";

@@ -1,0 +1,10 @@
+{
+	"type": "module",
+	"dependencies": {
+		"recluse": "latest"
+	},
+	"scripts": {
+		"dev": "recluse dev",
+		"build": "recluse build"
+	}
+}

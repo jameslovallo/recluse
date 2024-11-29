@@ -1,66 +1,43 @@
-import { html, loop, renderChildren, scss } from '../index.js'
-import { icon } from './icon.js'
+import { html, loop, renderChildren, scss } from "../index.js";
+import { icon } from "./icon.js";
 
-const accordionItem = ({ title, children }) => html`
-	<details class="item">
-		<summary>
-			<span>${title}</span>
-			${icon({ name: 'ChevronDown' })}
-		</summary>
-		<div class="children">${renderChildren(children)}</div>
-	</details>
-`
+const accordionItem = ({ children, title, icon: name = "ChevronDown" }) => html`
+  <details class="r-accordion r-surface r-border">
+    <summary class="r-row r-action">
+      ${title} ${icon ? icon({ name }) : ""}
+    </summary>
+    <div>${renderChildren(children)}</div>
+  </details>
+`;
 
-export const accordion = (items) => html`
-	<div class="accordion surface">${loop(items, accordionItem)}</div>
-`
+export const accordion = (items) => loop(items, accordionItem);
 
 accordion.style = scss`
-	.accordion {
-		> .item {
-			summary {
-				align-items: center;
-				cursor: pointer;
-				display: flex;
-				justify-content: space-between;
-				padding: var(--accordion-title-padding, .75em);
-				position: relative;
-				user-select: none;
-
-				&:--webkit-details-marker {
-					display: none;
-				}
-
-				&:hover {
-					background: var(--c-primary-hover);
-				}
-
-				&:active {
-					background: var(--c-primary-active);
-				}
-
-				span {
-					z-index: 1;
-				}
-
-				.mdi {
-					transition: transform 0.2s ease-in-out;
-				}
-			}
-
-			> .children {
-				padding: var(--accordion-child-padding, .75em);
-			}
-
-			+ .item {
-				border-top: var(--c-border);
-			}
-
-			&[open] > summary {
-				.mdi {
-					transform: rotate(180deg);
-				}
-			}
-		}
-	}
-`
+	.r-accordion {
+    summary {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0.75rem 0.75rem 1rem;
+      &::marker,
+      &::-webkit-details-marker {
+        content: "";
+        display: none;
+      }
+      .r-icon {
+				transition: transform 0.2s ease-in-out;
+      }
+    }
+    &[open] > summary {
+      .r-icon {
+        transform: rotate(180deg);
+      }
+    }
+    > div {
+      padding: 1rem;
+    }
+    + .r-accordion {
+      border-top: 0;
+    }
+  }
+`;

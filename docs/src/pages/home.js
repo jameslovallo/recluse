@@ -1,5 +1,5 @@
-import { md } from 'cuirk'
-import meta from '../data/meta.js'
+import { md } from "recluse";
+import meta from "../data/meta.js";
 
 export const body = md`
 # ${meta.title}
@@ -13,4 +13,4 @@ Duis tristique ex in mauris fermentum, et luctus orci egestas. Vivamus ac commod
 Nunc dolor orci, feugiat id massa ut, placerat pharetra augue. Aliquam lobortis vel diam eget laoreet. Fusce lobortis ante eget nulla imperdiet egestas porttitor sed nunc. Integer eu diam quis erat semper molestie nec nec nulla. Proin id lacus nisl. Pellentesque fermentum tellus ut nibh vestibulum mattis. Vestibulum molestie a ante sed eleifend. Phasellus egestas sem pulvinar, commodo dui sed, lobortis magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed placerat scelerisque enim et placerat. Ut accumsan, lacus a gravida euismod, felis nulla sodales odio, et faucibus tellus augue sed sapien. Duis eu feugiat neque. Praesent vehicula tempus lectus quis interdum. Phasellus et ornare ex.
 
 Quisque elit eros, semper id interdum sit amet, ullamcorper eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a malesuada erat. Aliquam id vestibulum mi, vel iaculis nisi. Curabitur varius massa tempus nunc egestas maximus. Cras elementum, sapien a tempus sodales, sem mauris vulputate nibh, a fermentum libero sapien ut est. Nulla efficitur vestibulum ultrices. Etiam nec mi dapibus, mollis neque id, vulputate lectus. Mauris porttitor volutpat urna, quis interdum augue efficitur eu. Maecenas sollicitudin, dolor sit amet porta ornare, dolor nisi aliquet ex, eu fermentum urna mi nec eros. Maecenas facilisis neque sit amet rutrum laoreet. Etiam vitae consectetur libero, vitae suscipit ante. Donec lacinia, sem sit amet semper aliquam, risus risus mollis erat, ac fermentum lacus erat id tellus.
-`
+`;

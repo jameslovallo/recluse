@@ -1,17 +1,17 @@
-import { html, loop, scss } from 'cuirk'
-import meta from '../data/meta.js'
-import nav from '../data/nav.js'
+import { html, loop, scss } from "recluse";
+import meta from "../data/meta.js";
+import nav from "../data/nav.js";
 
-const date = new Date().getFullYear()
+const date = new Date().getFullYear();
 
 export const footer = () => html`
-	<footer>
-		<div>
-			${loop(nav, ({ href, title }) => html`<a href="${href}">${title}</a>`)}
-		</div>
-		<small>© ${date} ${meta.title}. All Rights Reserved.</small>
-	</footer>
-`
+  <footer>
+    <div>
+      ${loop(nav, ({ href, title }) => html`<a href="${href}">${title}</a>`)}
+    </div>
+    <small>© ${date} ${meta.title}. All Rights Reserved.</small>
+  </footer>
+`;
 
 footer.style = scss`
 	footer {
@@ -41,4 +41,4 @@ footer.style = scss`
 			}
 		}
 	}
-`
+`;
