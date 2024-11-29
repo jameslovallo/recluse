@@ -117,7 +117,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-primary);
     }
 
-    .r-primary.invert {
+    .r-primary.r-invert {
     	background: var(--r-on-primary);
     	color: var(--r-primary);
     }
@@ -127,7 +127,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-secondary);
     }
 
-    .r-secondary.invert {
+    .r-secondary.r-invert {
     	background: var(--r-on-secondary);
     	color: var(--r-secondary);
     }
@@ -137,7 +137,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-tertiary);
     }
 
-    .r-tertiary.invert {
+    .r-tertiary.r-invert {
     	background: var(--r-on-tertiary);
     	color: var(--r-tertiary);
     }
@@ -147,7 +147,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-success);
     }
 
-    .r-success.invert {
+    .r-success.r-invert {
     	background: var(--r-on-success);
     	color: var(--r-success);
     }
@@ -157,7 +157,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-error);
     }
 
-    .r-error.invert {
+    .r-error.r-invert {
     	background: var(--r-on-error);
     	color: var(--r-error);
     }
@@ -167,7 +167,7 @@ export const componentStyles = (components) => html`
     	color: var(--r-on-warning);
     }
 
-    .r-warning.invert {
+    .r-warning.r-invert {
     	background: var(--r-on-warning);
     	color: var(--r-warning);
     }

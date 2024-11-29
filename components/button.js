@@ -9,7 +9,13 @@ export const button = ({
   target = "_self",
   variant = "solid",
 }) => {
-  const classes = classList([color, shape, size, variant]);
+  const classes = classList([
+    color,
+    shape,
+    size,
+    variant,
+    ["text", "outline"].includes(variant) ? "invert" : "",
+  ]);
   return href
     ? html`
         <a class="r-button r-action ${classes}" href=${href} target=${target}>
