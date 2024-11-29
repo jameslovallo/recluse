@@ -1,9 +1,11 @@
 import { componentScripts, componentStyles, html } from "recluse";
-import * as components from "../../../components/index.js";
+import * as components from "../components/index.js";
 import globalMeta from "../data/meta.js";
 import navLinks from "../data/nav.js";
 
 const { footer, pageMeta, nav } = components;
+
+console.log(Object.keys(components));
 
 export default ({ meta, children }) => {
   return html`
@@ -18,6 +20,7 @@ export default ({ meta, children }) => {
       <body>
         ${nav({ links: navLinks })}
         <main>${children}</main>
+        ${footer()}
         <!-- component scripts -->
         ${componentScripts(components)}
       </body>
