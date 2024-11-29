@@ -35,7 +35,7 @@ button.style = scss`
 		font-size: 14px;
 		height: 1.5rem;
 		justify-content: center;
-		line-height: 1em;
+		line-height: 14px;
 		overflow: hidden;
 		padding: 0 0.75rem;
 		position: relative;
