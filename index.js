@@ -36,29 +36,29 @@ export const componentStyles = (components) => html`
   <style>
     :root {
     	font-family: sans-serif;
-    	--c-dark: black;
-    	--c-light: white;
-    	--c-neutral: #8888;
-    	--c-neutral-light: #8882;
-    	--c-primary: #2962ff;
-    	--c-on-primary: white;
-    	--c-secondary: #6200ea;
-    	--c-on-secondary: white;
-    	--c-success: #00c853;
-    	--c-on-success: white;
-    	--c-error: #d50000;
-    	--c-on-error: white;
-    	--c-warning: #ffd600;
-    	--c-on-warning: black;
-    	--c-surface: #8881;
+    	--r-dark: black;
+    	--r-light: white;
+    	--r-neutral: #8888;
+    	--r-neutral-light: #8882;
+    	--r-primary: #2962ff;
+    	--r-on-primary: white;
+    	--r-secondary: #6200ea;
+    	--r-on-secondary: white;
+    	--r-success: #00c853;
+    	--r-on-success: white;
+    	--r-error: #d50000;
+    	--r-on-error: white;
+    	--r-warning: #ffd600;
+    	--r-on-warning: black;
+    	--r-surface: #8881;
     }
 
     * {
     	box-sizing: border-box;
     }
 
-    .c-square,
-    .c-circle {
+    .r-square,
+    .r-circle {
     	align-items: center;
     	aspect-ratio: 1;
     	display: inline-flex;
@@ -66,113 +66,113 @@ export const componentStyles = (components) => html`
     	vertical-align: middle;
     }
 
-    .c-circle {
+    .r-circle {
     	border-radius: 50%;
     }
 
-    .c-rounded {
-    	border-radius: var(--c-rounded-radius, 0.25rem);
+    .r-rounded {
+    	border-radius: var(--r-rounded-radius, 0.25rem);
     }
 
-    .c-pill {
-    	border-radius: var(--c-pill-radius, 50vh);
+    .r-pill {
+    	border-radius: var(--r-pill-radius, 50vh);
     }
 
-    .c-row {
+    .r-row {
     	display: flex;
     	gap: 0.5rem;
     }
 
-    .c-column {
+    .r-column {
     	display: flex;
     	flex-direction: column;
     	gap: 0.5rem;
     }
 
-    .c-stack {
+    .r-stack {
     	display: inline-grid;
     }
 
-    .c-stack > * {
+    .r-stack > * {
     	grid-area: 1/-1;
     	width: 100%;
     }
 
-    .c-center {
+    .r-center {
     	align-items: center;
     	display: flex;
     	justify-content: center;
     }
 
-    .c-light {
-    	color: var(--c-dark);
+    .r-light {
+    	color: var(--r-dark);
     }
 
-    .c-dark {
-    	color: var(--c-light);
+    .r-dark {
+    	color: var(--r-light);
     }
 
-    .c-primary {
-    	background: var(--c-primary);
-    	color: var(--c-on-primary);
+    .r-primary {
+    	background: var(--r-primary);
+    	color: var(--r-on-primary);
     }
 
-    .c-primary.invert {
-    	background: var(--c-on-primary);
-    	color: var(--c-primary);
+    .r-primary.invert {
+    	background: var(--r-on-primary);
+    	color: var(--r-primary);
     }
 
-    .c-secondary {
-    	background: var(--c-secondary);
-    	color: var(--c-on-secondary);
+    .r-secondary {
+    	background: var(--r-secondary);
+    	color: var(--r-on-secondary);
     }
 
-    .c-secondary.invert {
-    	background: var(--c-on-secondary);
-    	color: var(--c-secondary);
+    .r-secondary.invert {
+    	background: var(--r-on-secondary);
+    	color: var(--r-secondary);
     }
 
-    .c-success {
-    	background: var(--c-success);
-    	color: var(--c-on-success);
+    .r-success {
+    	background: var(--r-success);
+    	color: var(--r-on-success);
     }
 
-    .c-success.invert {
-    	background: var(--c-on-success);
-    	color: var(--c-success);
+    .r-success.invert {
+    	background: var(--r-on-success);
+    	color: var(--r-success);
     }
 
-    .c-error {
-    	background: var(--c-error);
-    	color: var(--c-on-error);
+    .r-error {
+    	background: var(--r-error);
+    	color: var(--r-on-error);
     }
 
-    .c-error.invert {
-    	background: var(--c-on-error);
-    	color: var(--c-error);
+    .r-error.invert {
+    	background: var(--r-on-error);
+    	color: var(--r-error);
     }
 
-    .c-warning {
-    	background: var(--c-warning);
-    	color: var(--c-on-warning);
+    .r-warning {
+    	background: var(--r-warning);
+    	color: var(--r-on-warning);
     }
 
-    .c-warning.invert {
-    	background: var(--c-on-warning);
-    	color: var(--c-warning);
+    .r-warning.invert {
+    	background: var(--r-on-warning);
+    	color: var(--r-warning);
     }
 
-    .c-surface {
-    	background: var(--c-surface, var(--c-neutral-light));
+    .r-surface {
+    	background: var(--r-surface, var(--r-neutral-light));
     	position: relative;
     }
 
-    .c-action {
+    .r-action {
     	cursor: pointer;
     	position: relative;
     }
-    .c-action:before {
-    	background: var(--c-action, var(--c-primary));
+    .r-action:before {
+    	background: var(--r-action, var(--r-primary));
     	bottom: 0;
     	content: "";
     	left: 0;
@@ -182,16 +182,16 @@ export const componentStyles = (components) => html`
     	top: 0;
     }
 
-    .c-action:hover:before {
+    .r-action:hover:before {
     	opacity: 0.15;
     }
 
-    .c-action:active:before {
+    .r-action:active:before {
     	opacity: 0.3;
     }
 
-    .c-border {
-    	border: 1px solid var(--c-neutral);
+    .r-border {
+    	border: 1px solid var(--r-neutral);
     }
 
 
