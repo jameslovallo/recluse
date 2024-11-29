@@ -27,15 +27,13 @@ button.style = scss`
 	.r-button {
 		--r-action: currentcolor;
 		align-items: center;
-		background: var(--r-primary);
 		border: none;
-		color: var(--r-on-primary);
 		cursor: pointer;
 		display: inline-flex;
-		font-size: 14px;
+		font-size: 1rem;
 		height: 1.5rem;
 		justify-content: center;
-		line-height: 14px;
+		line-height: 1rem;
 		overflow: hidden;
 		padding: 0 0.75rem;
 		position: relative;
@@ -43,7 +41,6 @@ button.style = scss`
 		&.r-outline,
 		&.r-text {
 			background: transparent;
-			color: var(--r-primary);
 			padding: 0 0.5rem;
 		}
 		&.r-outline {
