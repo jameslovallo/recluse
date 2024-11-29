@@ -32,9 +32,10 @@ button.style = scss`
 		color: var(--r-on-primary);
 		cursor: pointer;
 		display: inline-flex;
+		font-size: 14px;
 		height: 1.5rem;
 		justify-content: center;
-		line-height: 1;
+		line-height: 1em;
 		overflow: hidden;
 		padding: 0 0.75rem;
 		position: relative;
