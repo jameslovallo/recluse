@@ -1,7 +1,7 @@
 {
 	"name": "recluse",
 	"type": "module",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "A mindful rejection of the popular way of doing things.",
 	"main": "index.js",
 	"module": "index.js",
