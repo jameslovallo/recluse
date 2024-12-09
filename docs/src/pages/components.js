@@ -1,7 +1,7 @@
 import { md } from "recluse";
 
 export const meta = {
-  title: "Components",
+	title: "Components",
 };
 
 export const body = md`
@@ -9,4 +9,5 @@ export const body = md`
 - [Avatar](avatar)
 - [Button](button)
 - [Card](card)
+- [Link List](link-list)
 `;

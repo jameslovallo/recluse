@@ -26,6 +26,9 @@ avatar.style = scss`
       span {
         font-size: 1rem;
       }
+      .r-icon {
+        width: 1rem;
+      }
     }
     &.r-medium {
       width: 3rem;
