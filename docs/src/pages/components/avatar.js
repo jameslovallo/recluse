@@ -27,18 +27,18 @@ ${avatar({
 \`\`\`js
 import { avatar } from "recluse/components/index.js";
 
-\${avatar({
+avatar({
 	children: "A",
 	color: "primary",
 	shape: "rounded square",
 	size: "medium",
-})}
+})
 
-\${avatar({
+avatar({
 	children: "A",
 	image: "//picsum.photos/id/184/64/64",
 	shape: "circle",
 	size: "medium",
-})}
+})
 \`\`\`
 `;

@@ -2,31 +2,31 @@ import { md } from "recluse";
 import { button } from "../../components/index.js";
 
 export const meta = {
-	title: "Button",
+  title: "Button",
 };
 
 export const body = md`
 # Button
 
 ${button({
-	children: "Button",
-	color: "primary",
-	shape: "rounded",
-	size: "large",
+  children: "Button",
+  color: "primary",
+  shape: "rounded",
+  size: "large",
 })}
 
 ${button({
-	children: "Button",
-	color: "secondary",
-	shape: "pill",
-	variant: "text",
+  children: "Button",
+  color: "secondary",
+  shape: "pill",
+  variant: "text",
 })}
 
 ${button({
-	children: "A",
-	color: "success",
-	shape: "circle",
-	variant: "outline",
+  children: "A",
+  color: "success",
+  shape: "circle",
+  variant: "outline",
 })}
 
 ## Usage
@@ -34,23 +34,23 @@ ${button({
 \`\`\`js
 import { button } from "recluse/buttons/index.js";
 
-\${button({
+button({
   children: "Button",
   color: "primary",
   shape: "rounded",
   size: "large",
-})}
+})
 
-\${button({
+button({
   children: "Button",
   color: "secondary",
   shape: "pill",
-})}
+})
 
-\${button({
+button({
   children: "A",
   color: "tertiary",
   shape: "circle",
-})}
+})
 \`\`\`
 `;

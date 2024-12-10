@@ -22,20 +22,17 @@ ${card({
 ## Usage
 
 \`\`\`js
-import { avatar } from "recluse/components/index.js";
+import { card } from "recluse/components/index.js";
 
-\${avatar({
-	children: "A",
-	color: "primary",
-	shape: "rounded square",
-	size: "medium",
-})}
-
-\${avatar({
-	children: "A",
-	image: "//picsum.photos/id/184/64/64",
-	shape: "circle",
-	size: "medium",
-})}
+card({
+  children: [
+    html\`<h3>An h3 tag</h3>\`,
+    html\`<p>A paragraph tag</p>\`,
+    button({ children: "Text", variant: "text" }),
+    button({ children: "Text", variant: "text" }),
+  ],
+  color: "surface",
+  shape: "rounded",
+})
 \`\`\`
 `;

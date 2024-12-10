@@ -19,10 +19,10 @@ ${accordion([
 \`\`\`js
 import { accordion } from "recluse/components/index.js";
 
-\${accordion([
+accordion([
 	{ title: "Accordion item 1", children: "Accordion item 1 content" },
 	{ title: "Accordion item 2", children: "Accordion item 2 content" },
 	{ title: "Accordion item 3", children: "Accordion item 3 content" },
-])}
+])
 \`\`\`
 `;
