@@ -4,8 +4,8 @@ import { icon } from "./icon.js";
 
 export const linkList = ({
   children,
-  color,
-  shape = "circle",
+  color = "primary",
+  shape = "rounded square",
   size = "small",
 }) =>
   html`

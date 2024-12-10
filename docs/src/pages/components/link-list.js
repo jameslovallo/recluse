@@ -16,6 +16,16 @@ ${linkList({
   ],
 })}
 
+${linkList({
+  children: [
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Home" },
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Layers" },
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Email" },
+  ],
+  color: "secondary",
+  shape: "circle",
+})}
+
 ## Usage
 
 \`\`\`js
@@ -26,7 +36,17 @@ linkList({
     { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Home" },
     { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Layers" },
     { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Email" },
+  ]
+})
+
+linkList({
+  children: [
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Home" },
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Layers" },
+    { title: "Title ipsum dolor", copy: "Copy ipsum dolor", icon: "Email" },
   ],
+  color: "secondary",
+  shape: "circle",
 })
 \`\`\`
 `;
