@@ -3,42 +3,42 @@ import { avatar } from "./avatar.js";
 import { icon } from "./icon.js";
 
 export const linkList = ({
-	children,
-	color,
-	shape = "circle",
-	size = "small",
+  children,
+  color,
+  shape = "circle",
+  size = "small",
 }) =>
-	html`
-		<ul class="r-link-list">
-			${children
-				.map(
-					({ href, target = "_blank", copy, icon: name, title }) => html`
-						<li>
-							<a
-								class="r-action r-row r-${shape === "circle" ? "pill" : shape}"
-								href="${href}"
-								target="${target}"
-							>
-								${when(
-									name,
-									avatar({
-										children: icon({ name }),
-										color,
-										shape,
-										size,
-									})
-								)}
-								<span>
-									${when(title, title)}
-									${when(copy, html`<small>${copy}</small>`)}
-								</span>
-							</a>
-						</li>
-					`
-				)
-				.join("")}
-		</ul>
-	`;
+  html`
+    <ul class="r-link-list">
+      ${children
+        .map(
+          ({ href, target = "_self", copy, icon: name, title }) => html`
+            <li>
+              <a
+                class="r-action r-row r-${shape === "circle" ? "pill" : shape}"
+                href="${href}"
+                target="${target}"
+              >
+                ${when(
+                  name,
+                  avatar({
+                    children: icon({ name }),
+                    color,
+                    shape,
+                    size,
+                  })
+                )}
+                <span>
+                  ${when(title, title)}
+                  ${when(copy, html`<small>${copy}</small>`)}
+                </span>
+              </a>
+            </li>
+          `
+        )
+        .join("")}
+    </ul>
+  `;
 
 linkList.style = scss`
   .r-link-list {
