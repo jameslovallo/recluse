@@ -1,9 +1,7 @@
 import { avatar } from "../../components/index.js";
 import { displayDemo } from "../../utils/display-demo.js";
 
-export const meta = {
-  title: "Avatar",
-};
+export const meta = { title: "Avatar" };
 
 const demo = () =>
   avatar({

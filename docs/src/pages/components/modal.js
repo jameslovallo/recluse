@@ -2,9 +2,7 @@ import { html } from "recluse";
 import { button, icon, modal } from "../../components/index.js";
 import { displayDemo } from "../../utils/display-demo.js";
 
-export const meta = {
-  title: "Modal",
-};
+export const meta = { title: "Modal" };
 
 const demo = () =>
   modal({

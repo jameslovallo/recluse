@@ -1,9 +1,7 @@
 import { displayDemo } from "../../utils/display-demo.js";
 import { linkList } from "../../components/index.js";
 
-export const meta = {
-  title: "Link List",
-};
+export const meta = { title: "Link List" };
 
 const demo = () =>
   linkList({

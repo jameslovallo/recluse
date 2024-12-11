@@ -1,9 +1,7 @@
 import { displayDemo } from "../../utils/display-demo.js";
 import { button } from "../../components/index.js";
 
-export const meta = {
-  title: "Button",
-};
+export const meta = { title: "Button" };
 
 const demo = () =>
   button({

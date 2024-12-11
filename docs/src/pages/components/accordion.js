@@ -1,9 +1,7 @@
 import { accordion } from "../../components/index.js";
 import { displayDemo } from "../../utils/display-demo.js";
 
-export const meta = {
-  title: "Accordion",
-};
+export const meta = { title: "Accordion" };
 
 const demo = () =>
   accordion([

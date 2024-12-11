@@ -2,9 +2,7 @@ import { html } from "recluse";
 import { button, card } from "../../components/index.js";
 import { displayDemo } from "../../utils/display-demo.js";
 
-export const meta = {
-  title: "Card",
-};
+export const meta = { title: "Card" };
 
 const demo = () =>
   card({
