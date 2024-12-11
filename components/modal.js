@@ -1,10 +1,10 @@
 import { html, renderChildren, scss } from "../index.js";
 import { button } from "./button.js";
 
-export const modal = ({ trigger, close, children }) => html`
+export const modal = ({ open, close, children }) => html`
   <div class="r-modal">
-    <div class="trigger">
-      ${trigger ? trigger : button({ children: "Open", shape: "pill" })}
+    <div class="r-modal-trigger">
+      ${open ? open : button({ children: "Open", shape: "pill" })}
     </div>
     <dialog>
       <div class="content">
@@ -20,7 +20,7 @@ export const modal = ({ trigger, close, children }) => html`
 modal.init = () => {
   const modals = document.querySelectorAll(".r-modal");
   modals.forEach((modal) => {
-    const trigger = modal.querySelector(".trigger > *");
+    const trigger = modal.querySelector(".r-modal-trigger > *");
     const dialog = modal.querySelector("dialog");
     trigger.addEventListener("click", () => dialog.showModal());
   });

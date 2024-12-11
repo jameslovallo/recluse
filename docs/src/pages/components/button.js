@@ -1,56 +1,16 @@
-import { md } from "recluse";
+import { displayDemo } from "../../utils/display-demo.js";
 import { button } from "../../components/index.js";
 
 export const meta = {
   title: "Button",
 };
 
-export const body = md`
-# Button
+const demo = () =>
+  button({
+    children: "Button",
+    color: "primary",
+    shape: "rounded",
+    size: "large",
+  });
 
-${button({
-  children: "Button",
-  color: "primary",
-  shape: "rounded",
-  size: "large",
-})}
-
-${button({
-  children: "Button",
-  color: "secondary",
-  shape: "pill",
-  variant: "text",
-})}
-
-${button({
-  children: "A",
-  color: "success",
-  shape: "circle",
-  variant: "outline",
-})}
-
-## Usage
-
-\`\`\`js
-import { button } from "recluse/buttons/index.js";
-
-button({
-  children: "Button",
-  color: "primary",
-  shape: "rounded",
-  size: "large",
-})
-
-button({
-  children: "Button",
-  color: "secondary",
-  shape: "pill",
-})
-
-button({
-  children: "A",
-  color: "tertiary",
-  shape: "circle",
-})
-\`\`\`
-`;
+export const body = displayDemo(meta.title, demo);

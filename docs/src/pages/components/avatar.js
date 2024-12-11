@@ -1,44 +1,17 @@
-import { md } from "recluse";
 import { avatar } from "../../components/index.js";
+import { displayDemo } from "../../utils/display-demo.js";
 
 export const meta = {
   title: "Avatar",
 };
 
-export const body = md`
-# Avatar
+const demo = () =>
+  avatar({
+    children: "A",
+    color: "primary",
+    image: "//picsum.photos/id/184/64/64",
+    shape: "circle",
+    size: "medium",
+  });
 
-${avatar({
-  children: "A",
-  color: "primary",
-  shape: "rounded square",
-  size: "medium",
-})}
-
-${avatar({
-  children: "A",
-  image: "//picsum.photos/id/184/64/64",
-  shape: "circle",
-  size: "medium",
-})}
-
-## Usage
-
-\`\`\`js
-import { avatar } from "recluse/components/index.js";
-
-avatar({
-	children: "A",
-	color: "primary",
-	shape: "rounded square",
-	size: "medium",
-})
-
-avatar({
-	children: "A",
-	image: "//picsum.photos/id/184/64/64",
-	shape: "circle",
-	size: "medium",
-})
-\`\`\`
-`;
+export const body = displayDemo(meta.title, demo);
