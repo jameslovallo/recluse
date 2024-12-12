@@ -21,7 +21,7 @@ export const nav = ({ links, icon: navIcon = "Menu" }) => {
             ariaLabel: "Open Menu",
           }),
           children: html`
-            <div style="display: grid; gap: 1rem; justify-content: start; margin-bottom: 1rem;">
+            <div style="margin-bottom: 1rem;">
               ${loop([...mobileStart, ...mobileCenter, ...mobileEnd], (x) =>
                 button({ variant: "text", children: x.title, ...x })
               )}
