@@ -7,7 +7,7 @@ export const meta = { title: "Modal" };
 const demo = () =>
   modal({
     id: "nav",
-    trigger: button({
+    open: button({
       children: icon({ name: "Menu" }),
       shape: "circle",
       size: "large",
