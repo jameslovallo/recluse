@@ -13,7 +13,7 @@ export const nav = ({ links, icon: navIcon = "Menu" }) => {
       <div>
         ${modal({
           id: "nav",
-          trigger: button({
+          open: button({
             children: icon({ name: navIcon }),
             shape: "circle",
             size: "large",
