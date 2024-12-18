@@ -21,7 +21,6 @@ const marked = new Marked(
 ).use(gfmHeadingId());
 
 const writePage = async (filename) => {
-	console.log(filename);
 	const defaultLayout = await import("../../../src/layouts/default.js").then(
 		(m) => m.default
 	);
@@ -32,10 +31,10 @@ const writePage = async (filename) => {
 				meta,
 				children: marked.parse(body),
 			});
-			if (filename === "src/pages/home.js") {
+			if (/src.pages.home\.js/.test(filename)) {
 				filename = "dist";
 			}
-			const outDir = filename.replace("src/pages", "dist").replace(".js", "");
+			const outDir = filename.replace(/src.pages/, "dist").replace(".js", "");
 			fs.mkdirSync(outDir, { recursive: true });
 			fs.writeFileSync(outDir + "/index.html", page, {
 				encoding: "utf8",
