@@ -1,11 +1,11 @@
-import { css, html, renderChildren } from 'cuirk'
+import { css, html, renderChildren } from "recluse";
 
-export const grid = ({ children, size = '30ch' }) =>
+export const grid = ({ children, size = "30ch" }) =>
 	html`
 		<div class="grid" style="--grid-size: ${size}">
 			${renderChildren(children)}
 		</div>
-	`
+	`;
 
 grid.style = css`
 	.grid {
@@ -13,4 +13,4 @@ grid.style = css`
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(var(--grid-size), 1fr));
 	}
-`
+`;

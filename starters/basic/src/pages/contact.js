@@ -1,4 +1,4 @@
-import { md } from "cuirk";
+import { md } from "recluse";
 import { contactForm } from "../components/index.js";
 
 export const meta = {
