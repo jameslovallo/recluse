@@ -1,7 +1,7 @@
 {
 	"name": "recluse",
 	"type": "module",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"description": "A component and SPA framework for busy developers who are sick of the chaos.",
 	"main": "index.js",
 	"module": "index.js",
