@@ -2,48 +2,52 @@ import { html, loop, scss } from "recluse";
 import { button, icon, modal } from "./index.js";
 
 export const nav = ({ links, icon: navIcon = "Menu" }) => {
-  const desktopStart = links.filter(({ desktop }) => desktop === "start");
-  const desktopCenter = links.filter(({ desktop }) => desktop === "center");
-  const desktopEnd = links.filter(({ desktop }) => desktop === "end");
-  const mobileStart = links.filter(({ mobile }) => mobile === "start");
-  const mobileCenter = links.filter(({ mobile }) => mobile === "center");
-  const mobileEnd = links.filter(({ mobile }) => mobile === "end");
-  return html`
-    <nav class="r-nav">
-      <div>
-        ${modal({
-          id: "nav",
-          open: button({
-            children: icon({ name: navIcon }),
-            shape: "circle",
-            size: "large",
-            variant: "text",
-            ariaLabel: "Open Menu",
-          }),
-          children: html`
-            <div style="margin-bottom: 1rem;">
-              ${loop([...mobileStart, ...mobileCenter, ...mobileEnd], (x) =>
-                button({ variant: "text", children: x.title, ...x })
-              )}
-            </div>
-          `,
-        })}
-        ${loop(desktopStart, (x) =>
-          button({ variant: "text", children: x.title, ...x })
-        )}
-      </div>
-      <div>
-        ${loop(desktopCenter, (x) =>
-          button({ variant: "text", children: x.title, ...x })
-        )}
-      </div>
-      <div>
-        ${loop(desktopEnd, (x) =>
-          button({ variant: "text", children: x.title, ...x })
-        )}
-      </div>
-    </nav>
-  `;
+	const desktopStart = links.filter(({ desktop }) => desktop === "start");
+	const desktopCenter = links.filter(({ desktop }) => desktop === "center");
+	const desktopEnd = links.filter(({ desktop }) => desktop === "end");
+	const mobileStart = links.filter(({ mobile }) => mobile === "start");
+	const mobileCenter = links.filter(({ mobile }) => mobile === "center");
+	const mobileEnd = links.filter(({ mobile }) => mobile === "end");
+	return html`
+		<nav class="r-nav">
+			<div>
+				${modal({
+					id: "nav",
+					open: button({
+						children: icon({ name: navIcon }),
+						shape: "circle",
+						size: "large",
+						variant: "text",
+						ariaLabel: "Open Menu",
+					}),
+					children: html`
+						<div style="margin-bottom: 1rem;">
+							${loop([...mobileStart, ...mobileCenter, ...mobileEnd], (x) =>
+								button({
+									variant: "text",
+									children: x.title,
+									...x,
+								})
+							)}
+						</div>
+					`,
+				})}
+				${loop(desktopStart, (x) =>
+					button({ variant: "text", children: x.title, ...x })
+				)}
+			</div>
+			<div>
+				${loop(desktopCenter, (x) =>
+					button({ variant: "text", children: x.title, ...x })
+				)}
+			</div>
+			<div>
+				${loop(desktopEnd, (x) =>
+					button({ variant: "text", children: x.title, ...x })
+				)}
+			</div>
+		</nav>
+	`;
 };
 
 nav.style = scss`
