@@ -1,32 +1,32 @@
 import { html, classList, renderChildren, scss } from "../index.js";
 
 export const button = ({
-	children,
-	color = "primary",
-	href,
-	shape = "rounded",
-	size = "medium",
-	target = "_self",
-	variant = "solid",
+  children,
+  color = "primary",
+  href,
+  shape = "rounded",
+  size = "medium",
+  target = "_self",
+  variant = "solid",
 }) => {
-	const classes = classList([
-		color,
-		shape,
-		size,
-		variant,
-		["text", "outline"].includes(variant) ? "invert" : "",
-	]);
-	return href
-		? html`
-				<a class="r-button r-action ${classes}" href=${href} target=${target}>
-					${renderChildren(children)}
-				</a>
-		  `
-		: html`
-				<button class="r-button r-action ${classes}">
-					${renderChildren(children)}
-				</button>
-		  `;
+  const classes = classList([
+    color,
+    shape,
+    size,
+    variant,
+    ["text", "outline"].includes(variant) ? "invert" : "",
+  ]);
+  return href
+    ? html`
+        <a class="r-button r-action ${classes}" href=${href} target=${target}>
+          ${renderChildren(children)}
+        </a>
+      `
+    : html`
+        <button class="r-button r-action ${classes}">
+          ${renderChildren(children)}
+        </button>
+      `;
 };
 
 button.style = scss`
@@ -37,6 +37,7 @@ button.style = scss`
 		cursor: pointer;
 		display: inline-flex;
 		font-size: 1rem;
+		gap: 0.5rem;
 		height: 1.5rem;
 		justify-content: center;
 		line-height: 1rem;
