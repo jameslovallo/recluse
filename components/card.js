@@ -1,13 +1,13 @@
 import { html, renderChildren, scss, classList } from "../index.js";
 
 export const card = ({
-  children,
-  color = "surface",
-  shape = "rounded",
+	children,
+	color = "surface",
+	shape = "rounded",
 }) => html`
-  <div class="r-card r-surface r-border ${classList([shape, color])}">
-    ${renderChildren(children)}
-  </div>
+	<div class="r-card r-surface r-border ${classList([shape, color])}">
+		${renderChildren(children)}
+	</div>
 `;
 
 card.style = scss`
@@ -17,12 +17,12 @@ card.style = scss`
       margin: 1rem,
     }
     > .r-button.r-text {
-      margin: .25rem 0;
+      margin: .5rem 0;
       &:first-of-type {
-        margin-inline-start: 0.25rem;
+        margin-inline-start: 0.5rem;
       }
       &:last-of-type {
-        margin-inline-end: 0.25rem;
+        margin-inline-end: 0.5rem;
       }
     }
   }
